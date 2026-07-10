@@ -33,7 +33,7 @@ export default function Footer() {
             <div className="flex flex-col space-y-0">
               {/* Brand Logo + Name */}
               <div className="flex items-center space-x-3">
-                <img src="/Logo.png" alt="Logo Ichsan Kamil" className="w-14 h-14 object-contain" />
+                <img src="/logo.png" alt="Logo Ichsan Kamil" className="w-14 h-14 object-contain" />
                 <div>
                   <span className="font-serif font-bold text-xl text-white tracking-wide block leading-none">
                     ICHSAN KAMIL
