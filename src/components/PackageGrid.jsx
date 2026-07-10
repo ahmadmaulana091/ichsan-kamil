@@ -4,7 +4,7 @@ import { Star, Clock, Hotel, Plane, ShieldCheck, X, FileText, CheckCircle2, Chev
 const PACKAGES = [
   {
     id: 1,
-    title: "Umrah Hemat Awal Musim",
+    title: "Umrah Awal Musim",
     price: "Rp 27.900.000",
     priceValue: 27900000,
     month: "August",
@@ -65,7 +65,7 @@ const PACKAGES = [
   },
   {
     id: 3,
-    title: "Umrah VIP Signature Haramain",
+    title: "Umrah VIP Signature",
     price: "Rp 48.900.000",
     priceValue: 48900000,
     month: "October",
@@ -92,33 +92,33 @@ const PACKAGES = [
     inclusions: ["Visa VIP Umrah", "Tiket Pesawat Business Class PP", "Hotel Super Luxury (Oberoi & Fairmont Ka'bah View)", "Kereta Cepat Haramain (First Class)", "Layanan Private Transport & Guide VIP", "Full-board Catering Hotel Bintang 5", "Perlengkapan Premium Koper Carbon"],
     exclusions: ["Keperluan belanja pribadi", "Upgrade Room ke Suite"]
   },
-  {
-    id: 4,
-    title: "Umrah Spesial Awal Ramadhan",
-    price: "Rp 44.500.000",
-    priceValue: 44500000,
-    month: "Ramadhan",
-    type: "Premium",
-    duration: "15 Hari",
-    flight: "Qatar Airways / Saudia Airlines (Direct)",
-    hotelMadinah: "Dallah Taibah Madinah (★4)",
-    hotelMakkah: "Mövenpick Hajar Tower Makkah (★5)",
-    hotelStars: 5,
-    badge: "Ramadhan Spesial",
-    tagline: "Rasakan nikmatnya ibadah puasa dan tarawih di dua Masjid Suci umat Islam.",
-    highlights: ["Puasa di Masjid Nabawi & Haram", "I'tikaf Ramadhan Terbimbing", "Paket 15 Hari Panjang"],
-    itinerary: [
-      "Hari 1: Jakarta - Madinah. Istirahat di hotel.",
-      "Hari 2-5: Menikmati suasana awal Ramadhan di Madinah, Buka Puasa bersama di Masjid Nabawi, Shalat Tarawih.",
-      "Hari 6: Check-out, Miqat di Bir Ali, Kereta Cepat Haramain ke Makkah, Umrah Pertama.",
-      "Hari 7-12: Menghidupkan malam Ramadhan di Masjidil Haram, I'tikaf, Kajian Tarjih, Umrah Kedua.",
-      "Hari 13: Ziarah Kota Makkah dan persiapan Itikaf malam 21 Ramadhan.",
-      "Hari 14: Tawaf Wada, bertolak ke Jeddah, penerbangan kembali ke Jakarta.",
-      "Hari 15: Tiba di Jakarta. Umrah Ramadhan Mabrur."
-    ],
-    inclusions: ["Visa Ramadhan Resmi", "Tiket Pesawat PP Penerbangan Premium", "Hotel Madinah Bintang 4 & Makkah Bintang 5", "Katering Sahur & Buka Puasa Khas Indonesia/Arab", "Mutawwif Berpengalaman Ramadhan", "Tiket Kereta Cepat Haramain"],
-    exclusions: ["Passport & Vaksin", "Tips Operator Lokal", "Kebutuhan Laundry Pribadi"]
-  }
+  // {
+  //   id: 4,
+  //   title: "Umrah Spesial Awal Ramadhan",
+  //   price: "Rp 44.500.000",
+  //   priceValue: 44500000,
+  //   month: "Ramadhan",
+  //   type: "Premium",
+  //   duration: "15 Hari",
+  //   flight: "Qatar Airways / Saudia Airlines (Direct)",
+  //   hotelMadinah: "Dallah Taibah Madinah (★4)",
+  //   hotelMakkah: "Mövenpick Hajar Tower Makkah (★5)",
+  //   hotelStars: 5,
+  //   badge: "Ramadhan Spesial",
+  //   tagline: "Rasakan nikmatnya ibadah puasa dan tarawih di dua Masjid Suci umat Islam.",
+  //   highlights: ["Puasa di Masjid Nabawi & Haram", "I'tikaf Ramadhan Terbimbing", "Paket 15 Hari Panjang"],
+  //   itinerary: [
+  //     "Hari 1: Jakarta - Madinah. Istirahat di hotel.",
+  //     "Hari 2-5: Menikmati suasana awal Ramadhan di Madinah, Buka Puasa bersama di Masjid Nabawi, Shalat Tarawih.",
+  //     "Hari 6: Check-out, Miqat di Bir Ali, Kereta Cepat Haramain ke Makkah, Umrah Pertama.",
+  //     "Hari 7-12: Menghidupkan malam Ramadhan di Masjidil Haram, I'tikaf, Kajian Tarjih, Umrah Kedua.",
+  //     "Hari 13: Ziarah Kota Makkah dan persiapan Itikaf malam 21 Ramadhan.",
+  //     "Hari 14: Tawaf Wada, bertolak ke Jeddah, penerbangan kembali ke Jakarta.",
+  //     "Hari 15: Tiba di Jakarta. Umrah Ramadhan Mabrur."
+  //   ],
+  //   inclusions: ["Visa Ramadhan Resmi", "Tiket Pesawat PP Penerbangan Premium", "Hotel Madinah Bintang 4 & Makkah Bintang 5", "Katering Sahur & Buka Puasa Khas Indonesia/Arab", "Mutawwif Berpengalaman Ramadhan", "Tiket Kereta Cepat Haramain"],
+  //   exclusions: ["Passport & Vaksin", "Tips Operator Lokal", "Kebutuhan Laundry Pribadi"]
+  // }
 ];
 
 export default function PackageGrid({ filters }) {

@@ -23,11 +23,38 @@ const REVIEWS = [
   {
     id: 3,
     name: "Bpk. dr. Ridwan Malik",
-    role: "Dokter Spesialis, Surabaya",
-    package: "Umrah VIP Signature Haramain - Okt 2025",
+    role: "Dokter Spesialis, Jakarta",
+    package: "Umrah VIP Signature - Okt 2025",
     text: "Pelayanan berkelas bintang lima. Tiket Business Class membuat perjalanan panjang tidak terasa melelahkan. Transportasi privat dan bimbingan ziarah eksklusif dari mutawwif lulusan Universitas Islam Madinah memberi nilai spiritual yang sangat mendalam bagi keluarga kami.",
     stars: 5,
     initials: "RM"
+  },
+  {
+    id: 4,
+    name: "Ibu Dewi Rahayu",
+    role: "Ibu Rumah Tangga, Jakarta",
+    package: "Umrah Reguler Plus - Nov 2025",
+    text: "Subhanallah, ini umrah kedua saya dan saya pilih Ichsan Kamil karena rekomendasi teman. Tidak mengecewakan sama sekali. Pembimbing ibadah sangat sabar menjelaskan setiap doa dan tata cara. Saya sangat terkesan dengan koordinasi yang rapi dari awal hingga pulang ke tanah air.",
+    stars: 5,
+    initials: "DR"
+  },
+  {
+    id: 5,
+    name: "Bpk. Hendra Kusuma",
+    role: "Wiraswasta, Jakarta",
+    package: "Umrah Executive Gold - Des 2025",
+    text: "Alhamdulillah, ibadah umrah bersama istri berjalan sangat lancar. Akomodasi hotel bintang lima di Makkah dan Madinah benar-benar premium. Yang paling berkesan adalah guide lokal yang sangat berpengetahuan dan tidak pernah buru-buru, memberikan waktu cukup untuk berdoa di setiap tempat bersejarah.",
+    stars: 5,
+    initials: "HK"
+  },
+  {
+    id: 6,
+    name: "Ibu Hj. Nur Hasanah",
+    role: "ASN, Jakarta",
+    package: "Umrah Hemat Awal Musim - Jan 2026",
+    text: "Saya berangkat bersama grup kantor dan semuanya puas dengan layanan Ichsan Kamil. Dari proses pengurusan visa hingga kepulangan, semuanya profesional dan tepat waktu. Harga yang terjangkau tapi kualitas tidak murahan. Pasti akan merekomendasikan ke keluarga dan rekan-rekan.",
+    stars: 5,
+    initials: "NH"
   }
 ];
 

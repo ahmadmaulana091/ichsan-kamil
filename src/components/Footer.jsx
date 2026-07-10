@@ -30,19 +30,28 @@ export default function Footer() {
 
           {/* Col 1: Brand & Bio (4 cols) */}
           <div className="lg:col-span-4 space-y-6 text-left">
-            <div className="flex items-center space-x-2">
-              <img src="/logo.png" alt="Logo" className="w-12 h-12 object-contain rounded-md flex items-center justify-center shadow-md" />
-              <div>
-                <span className="font-serif font-bold text-xl text-white tracking-wide block leading-none">
-                  ICHSAN KAMIL
-                </span>
-                <span className="text-[10px] tracking-[0.25em] uppercase font-semibold text-gold block leading-none mt-1">
-                  Tour & Travel
-                </span>
+            <div className="flex flex-col space-y-0">
+              {/* Brand Logo + Name */}
+              <div className="flex items-center space-x-3">
+                <img src="/Logo.png" alt="Logo Ichsan Kamil" className="w-14 h-14 object-contain" />
+                <div>
+                  <span className="font-serif font-bold text-xl text-white tracking-wide block leading-none">
+                    ICHSAN KAMIL
+                  </span>
+                  <span className="text-[10px] tracking-[0.25em] uppercase font-semibold text-gold block leading-none mt-1">
+                    Tour &amp; Travel
+                  </span>
+                </div>
               </div>
-            </div>
 
-            <p className="text-sm text-white/80 leading-relaxed font-light">
+              {/* Kemenag Badge */}
+              <img
+                src="/LogoKemenagRemoveBg.png"
+                alt="Logo Kementerian Agama RI"
+                className="w-70 h-70 object-contain opacity-90 -mt-25"
+              />
+            </div>
+            <p className="text-sm text-white/80 leading-relaxed font-light -mt-25">
               Penyelenggara Resmi Perjalanan Ibadah Umrah (PPIU) dengan bimbingan ibadah yang matang, akomodasi premium bintang lima, dan pelayanan penuh ketulusan hati.
             </p>
 
@@ -50,7 +59,7 @@ export default function Footer() {
             <div className="flex space-x-4 pt-2">
               <a
                 href="https://instagram.com"
-                target="_blank"
+                target="https://www.instagram.com/ichsankamilofficial?igsh=MWJtdGpvbHkwcDh6bg=="
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 hover:bg-gold hover:text-maroon border border-white/10 flex items-center justify-center transition-all duration-300"
                 aria-label="Instagram"
@@ -62,17 +71,17 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://facebook.com"
-                target="_blank"
+                href="https://www.tiktok.com"
+                target="https://www.tiktok.com/@ichsankamilofficial?_r=1&_t=ZS-97v837Hkx6r"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 hover:bg-gold hover:text-maroon border border-white/10 flex items-center justify-center transition-all duration-300"
-                aria-label="Facebook"
+                aria-label="TikTok"
               >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.2 8.2 0 0 0 4.79 1.52V6.76a4.85 4.85 0 0 1-1.02-.07z" />
                 </svg>
               </a>
-              <a
+              {/* <a
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -83,7 +92,7 @@ export default function Footer() {
                   <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
                   <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
                 </svg>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -104,20 +113,20 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#packages"
-                  onClick={(e) => handleScrollTo(e, '#packages')}
-                  className="hover:text-gold hover:underline transition-colors"
-                >
-                  Paket Umrah
-                </a>
-              </li>
-              <li>
-                <a
                   href="#features"
                   onClick={(e) => handleScrollTo(e, '#features')}
                   className="hover:text-gold hover:underline transition-colors"
                 >
                   Keunggulan
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#packages"
+                  onClick={(e) => handleScrollTo(e, '#packages')}
+                  className="hover:text-gold hover:underline transition-colors"
+                >
+                  Paket Umrah
                 </a>
               </li>
               <li>
