@@ -1,128 +1,140 @@
 import React, { useState } from 'react';
-import { Star, Clock, Hotel, Plane, ShieldCheck, X, FileText, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Star, Clock, Hotel, Plane, ShieldCheck, X, FileText, CheckCircle2, ChevronRight, Phone, MapPin, Globe, MessageSquare } from 'lucide-react';
 
 const PACKAGES = [
   {
     id: 1,
-    title: "Umrah Hemat Awal Musim",
-    price: "Rp 27.900.000",
-    priceValue: 27900000,
-    month: "August",
-    type: "Regular",
-    duration: "9 Hari",
-    flight: "Lion Air / Batik Air (Direct)",
-    hotelMadinah: "Grand Plaza Madinah (★3)",
-    hotelMakkah: "Rehab Al-Akhir Makkah (★3)",
-    hotelStars: 3,
-    badge: "Hemat Awal Musim",
-    tagline: "Ideal untuk jamaah yang mencari perjalanan hemat dengan bimbingan penuh kenyamanan.",
-    highlights: ["Sertifikasi Kemenag Resmi", "Jarak hotel ±400m", "Makan 3x Prasmanan Melayu"],
+    title: "Umroh VIP + THAIF",
+    price: "Rp 35.000.000",
+    priceValue: 35000000,
+    month: "Agustus",
+    type: "VIP",
+    duration: "12 Hari",
+    flight: "Saudi Arabian Airlines (Direct)",
+    hotelMadinah: "Sanabel / Setaraf (★4)",
+    hotelMakkah: "Azka Al Safa / Setaraf (★5)",
+    hotelStars: 5,
+    badge: "Eksklusif VIP",
+    isSoldOut: true,
+    tagline: "Pengalaman ibadah termewah dengan akomodasi bintang 5 premium.",
+    brosurUrl: "https://wa.me/6285720988031?text=Assalamualaikum%20Ichsan%20Kamil%2C%20saya%20ingin%20meminta%20brosur%20paket%20Umrah%20Oktobert%20(2026)",
+    highlights: ["2x Sholat Jum'at", "Tiket PP + Visa + Asuransi", "Bus City Tour Exclusive"],
     itinerary: [
-      "Hari 1: Berkumpul di Bandara Soekarno-Hatta & Penerbangan ke Madinah.",
-      "Hari 2: Check-in hotel Madinah, Ziarah ke Makam Rasulullah SAW & Raudhah.",
-      "Hari 3: Ziarah Kota Madinah (Masjid Quba, Masjid Qiblatain, Kebun Kurma).",
-      "Hari 4: Persiapan Ihram, perjalanan menuju Makkah dengan Bus AC, ambil Miqat di Dzulkulaifah (Bir Ali), ibadah Umrah Pertama.",
-      "Hari 5: Acara bebas & Istirahat di Makkah.",
-      "Hari 6: Ziarah Kota Makkah (Jabal Tsur, Padang Arafah, Muzdalifah, Mina, Jabal Nur).",
-      "Hari 7: Pelaksanaan Umrah Kedua (Tana'im / Ji'ranah).",
-      "Hari 8: Tawaf Wada, Check-out hotel, menuju Bandara Jeddah untuk kepulangan ke Jakarta.",
-      "Hari 9: Tiba di Soekarno-Hatta Jakarta. Ibadah Umrah Selesai."
+      "Hari 1: Berkumpul di PT Ichsan Kami pukul 03.30 WIB pelepasan dan menuju Bandara Terminal 3 (5 jam sebelum keberangkatan). Sarapan, briefing dan check-in pesawat. Pukul 09.10 Pesawat SV817 By Saudia Airlines Take Off menuju Jeddah. Landing pukul 14.40 waktu setempat. Menuju hotel beristirahat sejenak, makan malam dan persiapan pelaksaaan Umroh Ke-1 (Miqot Umroh ke-1 dilakukan di pesawat atau dibandara melihat situasi dan kondisi).",
+      "Hari 2: Qiyamullail dan memperbanyak ibadah di Masjidil Haram, sarapan pagi dan persiapan sholat jum’at serta kegiatan pribadi Jamaah diberikan waktu bebas untuk memperbanyak Ibadah, seperti Tadarus Alquran, berdzikir, Itikaf dan Amalan Sunnah lainnya.",
+      "Hari 3: Qiyamulail dan memperbanyak ibadah di Masjidil Haram. Sarapan pagi dan Jamaah kumpul di lobby pukul 07.00 (on-time) persiapan City Tour Kota Makkah (Jabal Tsur, Padang Arafah, Jabal Rahmah, Muzdhalifah, Mina, Jabal Nur, Ji’Rona) dan Miqot Umroh ke-2 serta pelaksanaan Umroh ke-2 (diwajibkan membawa pakaian ihram).",
+      "Hari 4: Qiyamullail dan memperbanyak ibadah di Masjidil Haram, sarapan pagi dan kegiatan pribadi Jamaah diberikan waktu bebas untuk memperbanyak Ibadah, seperti Tadarus Alquran, berdzikir, Itikaf dan Amalan Sunnah lainnya.",
+      "Hari 5: Qiyamulail dan memperbanyak ibadah di Masjidil Haram. Sarapan pagi dan Jamaah kumpul di lobby pukul 07.00 (on-time) persiapan City Tour Thaif (Masjid Abdullah Bin Abbas, Masjid Al-Ku/’aa. Pabrik Parfum, Cable Car/Kereta Gantung dan Makan siang khas Arab) dan Miqot Umroh ke-3 untuk pelaksanaan Umroh ke-3 (Mandiri) (diwajibkan membawa pakaian ihram).",
+      "Hari 6: Qiyamulail dan memperbanyak ibadah di Masjidil Haram Sarapan pagi dan Pukul 10.00 Jamaah diminta untuk mengeluarkan koper dari kamar masing masing. THAWAF WADA’. Pukul 14.00 Checkout hotel. Jamaah Menuju Madinah by Bus.",
+      "Hari 7: Qiyamulail dan memperbanyak ibadah di Masjid Nabawi. Sarapan pagi dan Berziarah ke Makam Nabi Muhammad ﷺ (Raudhah : tergantung jadwal dari Muasasah).",
+      "Hari 8: Qiyamulail dan memperbanyak ibadah di Masjid Nabawi. Sarapan pagi. Pukul 07.00 (on-time) City Tour Percetakan Al-Qur’an, Masjid Quba, Jabal Uhud, Kebun Kurma, Masjid Qiblatain, Khandaq.",
+      "Hari 9: Qiyamulail dan memperbanyak ibadah di Masjid Nabawi. Sarapan pagi dan pengenalan sekitar Masjid Nabawi (Pemakaman Baqi, Saqifah Bani Saidah, Masjid Abu Bakar, Masjid Ghomamah, Masjid Ali). Persiapan Sholat Jum’at.",
+      "Hari 10: Qiyamullail dan memperbanyak ibadah di Masjid Nabawi, sarapan pagi dan kegiatan pribadi Jamaah diberikan waktu bebas untuk memperbanyak Ibadah, seperti Tadarus Alquran, berdzikir, Itikaf dan Amalan Sunnah lainnya.",
+      "Hari 11: Qiyamullail dan memperbanyak ibadah di Masjid Nabawi, sarapan pagi dan persiapan Ziarah Wada (Perpisahan). Koper Bagasi diletakkan didepan kamar masing-masing pukul 09.00. Makan siang dan berkumpul di lobby untuk persiapan Check Out. Menuju Bandara Madinah menuju Jakarta dengan menggunakan pesawat SV820 take-off pukul 20.25",
+      "Hari 12: Tiba di Soekarno-Hatta Jakarta. Ibadah Umrah Selesai."
     ],
-    inclusions: ["Visa Umrah Resmi", "Tiket Pesawat PP Ekonomi", "Hotel Madinah & Makkah", "Bus AC Executive", "Makan 3x Sehari", "Mutawwif & Tour Leader", "Air Zamzam 5L (jika diizinkan)"],
-    exclusions: ["Pembuatan Passport & Buku Kuning Meningitis", "Kebutuhan Pribadi & Kelebihan Bagasi", "Kamar Single/Double Upgrade"]
+    inclusions: ["Visa Umrah & Asuransi KSA", "Tiket Pesawat PP Saudia Airlines", "Tour Leader & Muthowif", "Jarak Hotel Strategis", "Pembimbing Berpengalaman", "Bus City Tour Exclusive"],
+    exclusions: ["Pembuatan Passport & Suntik Meningitis", "Kebutuhan Pribadi & Kelebihan Bagasi", "Kelebihan Bagasi"]
   },
   {
     id: 2,
-    title: "Umrah Executive Gold",
-    price: "Rp 36.500.000",
-    priceValue: 36500000,
-    month: "September",
-    type: "Premium",
-    duration: "12 Hari",
-    flight: "Saudi Arabian Airlines (Direct Makkah/Madinah)",
-    hotelMadinah: "Al-Aqeeq Madinah (★4)",
-    hotelMakkah: "Swissôtel Al Maqam Makkah (★5)",
-    hotelStars: 5,
-    badge: "Paling Populer",
-    tagline: "Paket premium dengan hotel bintang 5 langsung di pelataran Masjidil Haram.",
-    highlights: ["Terbang Langsung Saudia Airlines", "Kereta Cepat Haramain Express", "Hotel nempel Masjidil Haram"],
+    title: "Umrah Oktober 2026",
+    price: "Rp 32.500.000",
+    priceValue: 32500000,
+    month: "Oktober",
+    type: "Regular",
+    duration: "9 Hari",
+    flight: "Saudi Arabian Airlines (Direct)",
+    hotelMadinah: "Jawharat Al Rasheed / Setaraf (★3)",
+    hotelMakkah: "Azka Al Safa / Setaraf (★5)",
+    hotelStars: 3,
+    badge: "Oktober 2026",
+    tagline: "Ideal untuk jamaah yang mencari perjalanan hemat dengan bimbingan penuh kenyamanan.",
+    brosurUrl: "https://wa.me/6285720988031?text=Assalamualaikum%20Ichsan%20Kamil%2C%20saya%20ingin%20meminta%20brosur%20paket%20Umrah%20Oktobert%20(2026)",
+    highlights: ["Jarak Hotel Strategis", "Free Zam-Zam 5 ltr", "Percetakan Al-Qur'an"],
     itinerary: [
-      "Hari 1: Penerbangan langsung ke Madinah dengan Saudia Airlines. Check-in hotel.",
-      "Hari 2: Ziarah makam Rasulullah SAW, Abu Bakar Shiddiq, Umar bin Khattab, dan Raudhah.",
-      "Hari 3: Ziarah sejarah Madinah dan kajian fiqih Umrah.",
-      "Hari 4: Perjalanan ke Makkah menggunakan Kereta Cepat Haramain (Haramain High Speed Railway - Hanya 2 Jam), pelaksanaan Umrah Pertama.",
-      "Hari 5: Memperbanyak Ibadah Mandiri di Masjidil Haram.",
-      "Hari 6: Ziarah Kota Makkah & Pelaksanaan Umrah Kedua.",
-      "Hari 7: Kajian keislaman bersama Ustadz Pembimbing di Makkah.",
-      "Hari 8: Ziarah tambahan ke Museum Wahyu (Jabal Nur).",
-      "Hari 9: Pelaksanaan Umrah Ketiga / Acara Mandiri.",
-      "Hari 10: Acara bebas belanja oleh-oleh di Makkah.",
-      "Hari 11: Tawaf Wada, check-out hotel, perjalanan menuju Jeddah untuk penerbangan pulang.",
-      "Hari 12: Tiba di Jakarta dengan selamat."
+      "Hari 1: Berkumpul Bandara International Soekarno Hatta Terminal 2F (5 jam sebelum keberangkatan) briefing dan check-in pesawat.",
+      "Hari 2: Landing bandara King Abdul Aziz, Jeddah. Proses Imigrasi dan Bagasi. Jamaah Menuju Hotel Madinah by Bus dan Check In Hotel Madinah dan Istirahat.",
+      "Hari 3: Qiyamulail dan sholat subuh berjamaah di Masjid Nabawi. Berziarah ke Makam Nabi Muhammad ﷺ (Raudhah : tergantung jadwal dari Muasasah). dan pengenalan sekitar Masjid Nabawi (Pemakaman Baqi, Saqifah Bani Saidah, Masjid Abu Bakar, Masjid Ghomamah, Masjid Ali).",
+      "Hari 4: Qiyamulail dan sholat subuh di Masjid Nabawi. Setelah Sarapan, Pukul 07.00 Jamaah bersiap untuk City Tour Percetakan Al-Qur’an dan Madinah (Masjid Quba, Masjid Qiblatain, Jabal Uhud, Masjid Khandak dan Kebun/Pasar Kurma).",
+      "Hari 5: Qiyamulail dan sholat subuh berjamaah di Masjid Nabawi dan Ziarah Wada’. Sarapan pagi dan Pukul 08.00 Jamaah diminta untuk mengeluarkan koper dari kamar masing-masing. Pelaksanaan Sholat Jum’at. Checkout hotel. Miqot Bir Ali, Jamaah Menuju Hotel Makkah by Bus dan Check In Hotel. Pelaksanaan Umroh Wajib.",
+      "Hari 6: Qiyamulail di Masjidil Haram. Jamaah diberikan waktu bebas untuk memperbanyak Ibadah, seperti Tadarus Alquran, berdzikir, Itikaf dan Amalan Sunnah lainnya. Pelaksanaan Umroh pertama.",
+      "Hari 7: Setelah sarapan Jamaah kemudian bersiap-siap untuk City Tour Makkah (Jabal Tsur, Arafah, Jabal Rahmah, Muzdalifah, Mina, Jabal Nur, dan tempat Miqot Ji’ronah) dan diwajibkan membawa kain ihrom untuk melaksanakan ibadah umroh kedua.",
+      "Hari 8: Sarapan pagi. Pukul 07.00 City Tour Thaif (Kondisional) dan tempat Miqot Qornul Manazil diwajibkan membawa kain ihrom Pelaksanaan Umroh Ketiga.",
+      "Hari 9: Qiyamulail dan sholat subuh berjamaah di Masjidil Haram Sarapan pagi dan Pukul 08.00 Jamaah diminta untuk mengeluarkan koper dari kamar masing-masing. THAWAF WADA’. Pukul 14.00 Checkout hotel. Jamaah Menuju Jeddah by Bus."
     ],
-    inclusions: ["Visa Umrah & Asuransi KSA", "Tiket Pesawat PP Saudia Airlines", "Hotel Bintang 4 & Bintang 5 Premium", "Tiket Kereta Cepat Haramain (Ekonomi)", "Makan Menu Internasional & Indonesia", "Bimbingan Mutawwif Berlisensi", "Perlengkapan Umrah Eksklusif"],
-    exclusions: ["Pengeluaran Pribadi (Laundry, Telepon, dll.)", "Tips Guide & Driver", "Pemeriksaan Medis Tambahan"]
+    inclusions: ["Visa Umrah & Asuransi KSA", "Tiket Pesawat PP Saudia Airlines", "Jarak Hotel Strategis", "Perlengkapan", "Pembimbing Berpengalaman", "Bus City Tour Exclusive"],
+    exclusions: ["Pembuatan Passport", "Suntik Meningitis", "Transport dari Daerah ke Jakarta"]
   },
   {
     id: 3,
-    title: "Umrah VIP Signature Haramain",
-    price: "Rp 48.900.000",
-    priceValue: 48900000,
-    month: "October",
-    type: "VIP",
-    duration: "9 Hari",
-    flight: "Saudi Arabian Airlines (Business Class)",
-    hotelMadinah: "The Oberoi Madinah (★5 Luxury)",
-    hotelMakkah: "Fairmont Makkah Clock Royal Tower (★5 Luxury)",
-    hotelStars: 5,
-    badge: "Eksklusif VIP",
-    tagline: "Pengalaman ibadah termewah dengan akomodasi bintang 5 premium di Tower Jam Makkah.",
-    highlights: ["Business Class Flight", "Hotel Bintang 5 Luxury View Ka'bah", "Private VIP Bus AC"],
-    itinerary: [
-      "Hari 1: Flight Business Class Jakarta - Madinah. Penjemputan Private VIP Bus, check-in Oberoi Madinah.",
-      "Hari 2: Ziarah Khusus Raudhah Jalur VIP / Fast-track.",
-      "Hari 3: City tour privat Madinah menggunakan mobil luxury khusus.",
-      "Hari 4: Transfer Makkah menggunakan Kereta Cepat First Class. Check-in Fairmont Clock Tower, langsung Umrah Pertama.",
-      "Hari 5: Ibadah intensif mandiri di Masjidil Haram dengan kamar menghadap Ka'bah.",
-      "Hari 6: Ziarah privat tempat bersejarah Makkah dan Umrah Kedua.",
-      "Hari 7: Kajian privat bersama Ustadz Nasional Pembimbing Khusus.",
-      "Hari 8: Tawaf Wada privat, check-out hotel, transfer bandara Jeddah dengan sedan privat.",
-      "Hari 9: Tiba di Soekarno-Hatta (VIP Airport Lounge Services)."
-    ],
-    inclusions: ["Visa VIP Umrah", "Tiket Pesawat Business Class PP", "Hotel Super Luxury (Oberoi & Fairmont Ka'bah View)", "Kereta Cepat Haramain (First Class)", "Layanan Private Transport & Guide VIP", "Full-board Catering Hotel Bintang 5", "Perlengkapan Premium Koper Carbon"],
-    exclusions: ["Keperluan belanja pribadi", "Upgrade Room ke Suite"]
-  },
-  {
-    id: 4,
-    title: "Umrah Spesial Awal Ramadhan",
-    price: "Rp 44.500.000",
-    priceValue: 44500000,
-    month: "Ramadhan",
-    type: "Premium",
-    duration: "15 Hari",
+    title: "Umrah Plus Mesir",
+    price: "Rp 38.900.000",
+    priceValue: 38900000,
+    month: "November",
+    type: "Plus",
+    duration: "12 Hari",
     flight: "Qatar Airways / Saudia Airlines (Direct)",
-    hotelMadinah: "Dallah Taibah Madinah (★4)",
-    hotelMakkah: "Mövenpick Hajar Tower Makkah (★5)",
-    hotelStars: 5,
-    badge: "Ramadhan Spesial",
-    tagline: "Rasakan nikmatnya ibadah puasa dan tarawih di dua Masjid Suci umat Islam.",
-    highlights: ["Puasa di Masjid Nabawi & Haram", "I'tikaf Ramadhan Terbimbing", "Paket 15 Hari Panjang"],
+    hotelMadinah: "Royal Andalus / Setaraf (★4)",
+    hotelMakkah: "Elaf Al Bait / Setaraf (★4)",
+    hotelMesir: "Front Pyramid / Setaraf (★4)",
+    hotelStars: 4,
+    badge: "November 2026",
+    tagline: "Padukan kesucian ibadah Umrah di Tanah Suci dengan keajaiban peradaban Islam di Bumi Para Nabi, Mesir.",
+    brosurUrl: "https://wa.me/6285720988031?text=Assalamualaikum%20Ichsan%20Kamil%2C%20saya%20ingin%20meminta%20brosur%20paket%20Umrah%20Plus%20Mesir",
+    highlights: ["Wisata Piramida Giza & Sphinx", "Hotel Bintang 4 Tiga Kota", "City Tour Kairo & Alexandria"],
     itinerary: [
-      "Hari 1: Jakarta - Madinah. Istirahat di hotel.",
-      "Hari 2-5: Menikmati suasana awal Ramadhan di Madinah, Buka Puasa bersama di Masjid Nabawi, Shalat Tarawih.",
-      "Hari 6: Check-out, Miqat di Bir Ali, Kereta Cepat Haramain ke Makkah, Umrah Pertama.",
-      "Hari 7-12: Menghidupkan malam Ramadhan di Masjidil Haram, I'tikaf, Kajian Tarjih, Umrah Kedua.",
-      "Hari 13: Ziarah Kota Makkah dan persiapan Itikaf malam 21 Ramadhan.",
-      "Hari 14: Tawaf Wada, bertolak ke Jeddah, penerbangan kembali ke Jakarta.",
-      "Hari 15: Tiba di Jakarta. Umrah Ramadhan Mabrur."
+      "Hari 1: Berkumpul di PT Ichsan Kamil pukul 05.00 WIB. Pelepasan jamaah dan menuju Bandara Soekarno-Hatta Terminal 3. Briefing perjalanan, check-in, dan boarding pesawat EgyptAir/Saudia menuju Madinah via transit.",
+      "Hari 2: Tiba di Bandara Prince Mohammed bin Abdulaziz, Madinah. Proses imigrasi dan pengambilan bagasi. Menuju Hotel Royal Andalus, check-in, dan istirahat. Sholat Ashar berjamaah di Masjid Nabawi. Makan malam dan pengenalan lingkungan sekitar Masjid Nabawi.",
+      "Hari 3: Qiyamullail dan sholat Subuh berjamaah di Masjid Nabawi. Sarapan pagi. Berziarah ke Makam Nabi Muhammad ﷺ (Raudhah – sesuai jadwal Muasasah). Pengenalan sekitar Masjid Nabawi: Pemakaman Baqi, Saqifah Bani Saidah, Masjid Abu Bakar, Masjid Ghomamah, Masjid Ali. Sore hari bebas beribadah.",
+      "Hari 4: Qiyamullail dan sholat Subuh di Masjid Nabawi. Sarapan. Pukul 07.00 (on-time) City Tour Madinah: Percetakan Al-Qur'an, Masjid Quba (masjid pertama dalam Islam), Masjid Qiblatain, Jabal Uhud dan Makam Syuhada Uhud, Masjid Khandak, Kebun & Pasar Kurma. Sore hari bebas ibadah mandiri.",
+      "Hari 5: Qiyamullail dan sholat Subuh berjamaah di Masjid Nabawi. Sarapan pagi. Ziarah Wada' (perpisahan dengan Kota Nabi). Pukul 08.00 koper dikeluarkan dari kamar. Check-out hotel Madinah. Miqat di Bir Ali (Dzulhulaifah) — niat ihram Umrah Pertama. Berangkat menuju Makkah dengan bus ber-AC.",
+      "Hari 6: Tiba di Makkah dan check-in Hotel Elaf Al Bait. Pelaksanaan Umrah Pertama: Thawaf, Sa'i, dan Tahallul di Masjidil Haram. Qiyamullail dan memperbanyak ibadah di Masjidil Haram. Sarapan pagi dan istirahat.",
+      "Hari 7: Qiyamullail dan memperbanyak ibadah di Masjidil Haram. Sarapan pagi. Pukul 07.00 (on-time) City Tour Makkah: Jabal Tsur, Padang Arafah, Jabal Rahmah, Muzdalifah, Mina, Jabal Nur (Gua Hira), Ji'ronah — Miqat Umrah Kedua. Pelaksanaan Umrah Kedua (wajib membawa pakaian ihram). Malam hari bebas ibadah.",
+      "Hari 8: Qiyamullail dan memperbanyak ibadah di Masjidil Haram. Sarapan. Kegiatan bebas: Tadarus Al-Qur'an, dzikir, itikaf. Sore hari waktu berbelanja (Masjidil Haram Grand Floor, Abraj Mall). Malam: persiapan Umrah Ketiga (Miqat di Tan'im / Masjid Aisyah).",
+      "Hari 9: Qiyamullail dan sholat Subuh berjamaah di Masjidil Haram. Sarapan. Pukul 08.00 koper dikeluarkan. THAWAF WADA'. Pukul 11.00 Check-out hotel. Transfer ke Bandara King Abdul Aziz, Jeddah. Penerbangan menuju Kairo, Mesir.",
+      "Hari 10: Tiba di Bandara Internasional Cairo. Proses imigrasi dan bagasi. Penjemputan oleh pemandu wisata Mesir berbahasa Indonesia. Menuju Hotel Front Pyramid, check-in dan istirahat. Malam: Makan malam di restoran lokal sambil menikmati pemandangan Sungai Nil. Orientasi kota Kairo.",
+      "Hari 11: Sarapan di hotel. Full Day City Tour Kairo (Giza & Islam): Kompleks Piramida Giza (Piramida Khufu, Khafre & Menkaure) + Sphinx (patung manusia-singa raksasa). Makan siang khas Mesir. Museum Nasional Peradaban Mesir (NMEC). Citadel Salahuddin Al-Ayyubi dan Masjid Muhammad Ali (Alabaster Mosque). Bazaar Khan el-Khalili — pusat kerajinan dan suvenir bersejarah. Makan malam dan kembali ke hotel.",
+      "Hari 12: Sarapan di hotel. Wisata sehari ke Kairo Islam & Kristen: Masjid Ibn Tulun (masjid tertua di Afrika). Gereja Gantung (Hanging Church) & Old Cairo. Masjid Al-Azhar & Universitas Al-Azhar (universitas Islam tertua di dunia). Makan siang. Sore: napak tilas Bumi Para Nabi di Masjid Rabi'a Adawiyah. Makan malam di tepi Sungai Nil. Malam bebas.",
+      "Hari 13: Sarapan di hotel. Day Trip ke Alexandria (3 jam dari Kairo): Benteng Qaitbay (bekas lokasi Mercusuar Alexandria, salah satu Keajaiban Dunia Kuno). Perpustakaan Alexandrina (Bibliotheca Alexandrina). Masjid Abu Abbas Al-Mursi. Pantai Mediterania & Corniche Alexandria. Makan siang seafood khas pesisir. Kembali ke Kairo. Makan malam dan persiapan kepulangan.",
+      "Hari 14: Sarapan pagi di hotel. Check-out. Transfer ke Bandara Internasional Cairo untuk penerbangan kembali ke Jakarta. Tiba di Bandara Soekarno-Hatta. Perjalanan Umrah Plus Mesir selesai — membawa oleh-oleh iman dan kenangan peradaban."
     ],
-    inclusions: ["Visa Ramadhan Resmi", "Tiket Pesawat PP Penerbangan Premium", "Hotel Madinah Bintang 4 & Makkah Bintang 5", "Katering Sahur & Buka Puasa Khas Indonesia/Arab", "Mutawwif Berpengalaman Ramadhan", "Tiket Kereta Cepat Haramain"],
-    exclusions: ["Passport & Vaksin", "Tips Operator Lokal", "Kebutuhan Laundry Pribadi"]
-  }
+    inclusions: ["Visa Umrah Resmi & Asuransi KSA", "Visa Mesir (Egypt Visa on Arrival diurus panitia)", "Tiket Pesawat PP EgyptAir/Saudia", "Hotel Bintang 5: Pullman Madinah, Elaf Al Bait & Front Pyramid", "Bus AC Eksklusif (Madinah-Makkah & di Mesir)", "Tour Leader & Mutawwif Berpengalaman", "Pemandu Wisata Lokal Mesir (berbahasa Indonesia)", "Katering 3x Sehari (Tanah Suci) + Makan siang & malam (Mesir)", "Tiket Masuk Piramida Giza, Sphinx & Museum Mesir", "Perlengkapan Umrah Lengkap (koper, ihram/mukena, dll)", "Air Zamzam 5 Liter"],
+    exclusions: ["Pembuatan Passport & Suntik Meningitis", "Biaya Laundry & Kebutuhan Pribadi", "Tips Pemandu Lokal & Driver", "Kelebihan Bagasi", "Pengeluaran Pribadi Selama di Mesir"]
+  },
+  // {
+  //   id: 4,
+  //   title: "Umrah Spesial Awal Ramadhan",
+  //   price: "Rp 44.500.000",
+  //   priceValue: 44500000,
+  //   month: "Ramadhan",
+  //   type: "Premium",
+  //   duration: "15 Hari",
+  //   flight: "Qatar Airways / Saudia Airlines (Direct)",
+  //   hotelMadinah: "Dallah Taibah Madinah (★4)",
+  //   hotelMakkah: "Mövenpick Hajar Tower Makkah (★5)",
+  //   hotelStars: 5,
+  //   badge: "Ramadhan Spesial",
+  //   tagline: "Rasakan nikmatnya ibadah puasa dan tarawih di dua Masjid Suci umat Islam.",
+  //   brosurUrl: "https://wa.me/6285720988031?text=Assalamualaikum%20Ichsan%20Kamil%2C%20saya%20ingin%20meminta%20brosur%20paket%20Umrah%20Spesial%20Ramadhan%20(Rp%2044.500.000)",
+  //   highlights: ["Puasa di Masjid Nabawi & Haram", "I'tikaf Ramadhan Terbimbing", "Paket 15 Hari Panjang"],
+  //   itinerary: [
+  //     "Hari 1: Jakarta - Madinah. Istirahat di hotel.",
+  //     "Hari 2-5: Menikmati suasana awal Ramadhan di Madinah, Buka Puasa bersama di Masjid Nabawi, Shalat Tarawih.",
+  //     "Hari 6: Check-out, Miqat di Bir Ali, Kereta Cepat Haramain ke Makkah, Umrah Pertama.",
+  //     "Hari 7-12: Menghidupkan malam Ramadhan di Masjidil Haram, I'tikaf, Kajian Tarjih, Umrah Kedua.",
+  //     "Hari 13: Ziarah Kota Makkah dan persiapan Itikaf malam 21 Ramadhan.",
+  //     "Hari 14: Tawaf Wada, bertolak ke Jeddah, penerbangan kembali ke Jakarta.",
+  //     "Hari 15: Tiba di Jakarta. Umrah Ramadhan Mabrur."
+  //   ],
+  //   inclusions: ["Visa Ramadhan Resmi", "Tiket Pesawat PP Penerbangan Premium", "Hotel Madinah Bintang 4 & Makkah Bintang 5", "Katering Sahur & Buka Puasa Khas Indonesia/Arab", "Mutawwif Berpengalaman Ramadhan", "Tiket Kereta Cepat Haramain"],
+  //   exclusions: ["Passport & Vaksin", "Tips Operator Lokal", "Kebutuhan Laundry Pribadi"]
+  // }
 ];
 
 export default function PackageGrid({ filters }) {
   const [selectedPackage, setSelectedPackage] = useState(null);
+  const [brosurPackage, setBrosurPackage] = useState(null);
 
   // Filtering Logic
   const filteredPackages = PACKAGES.filter(pkg => {
@@ -172,16 +184,25 @@ export default function PackageGrid({ filters }) {
             {filteredPackages.map((pkg) => (
               <div
                 key={pkg.id}
-                className="bg-white rounded-3xl overflow-hidden shadow-lg border border-maroon/5 hover:border-gold/30 hover:shadow-2xl transition-all duration-300 flex flex-col group"
+                className={`bg-white rounded-3xl overflow-hidden shadow-lg border border-maroon/5 transition-all duration-300 flex flex-col group relative ${pkg.isSoldOut
+                  ? 'opacity-80 filter saturate-[0.8] hover:shadow-lg'
+                  : 'hover:border-gold/30 hover:shadow-2xl'
+                  }`}
               >
                 {/* Header Card (Badge & Durasi) */}
                 <div className="relative p-6 bg-maroon text-white overflow-hidden flex-shrink-0">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-full transform translate-x-12 -translate-y-12 transition-transform duration-500 group-hover:scale-110" />
 
                   {/* Badge */}
-                  <span className="absolute top-6 right-6 inline-block px-3 py-1 bg-gold text-maroon text-xs font-bold uppercase tracking-wider rounded-full shadow-sm">
-                    {pkg.badge}
-                  </span>
+                  {pkg.isSoldOut ? (
+                    <span className="absolute top-6 right-6 inline-block px-3 py-1 bg-red-600 text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md z-10 animate-pulse">
+                      SOLD OUT
+                    </span>
+                  ) : (
+                    <span className="absolute top-6 right-6 inline-block px-3 py-1 bg-gold text-maroon text-xs font-bold uppercase tracking-wider rounded-full shadow-sm">
+                      {pkg.badge}
+                    </span>
+                  )}
 
                   <span className="text-gold text-xs font-bold uppercase tracking-widest block mb-1">
                     {pkg.type} PACKAGE
@@ -236,6 +257,15 @@ export default function PackageGrid({ filters }) {
                         <span className="text-xs">{pkg.hotelMakkah}</span>
                       </div>
                     </div>
+                    {pkg.hotelMesir && (
+                      <div className="flex items-start text-sm text-charcoal/80">
+                        <Globe className="w-4 h-4 text-gold mr-3 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="block font-semibold">Mesir:</span>
+                          <span className="text-xs">{pkg.hotelMesir}</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
 
                   <div className="pt-4 border-t border-charcoal/5">
@@ -259,14 +289,23 @@ export default function PackageGrid({ filters }) {
                   >
                     Detail Paket
                   </button>
-                  <a
-                    href={getWhatsAppLink(pkg)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 py-3 px-4 rounded-xl bg-gold hover:bg-gold/90 text-maroon font-bold text-center text-sm transition-all duration-200"
-                  >
-                    Pesan Kuota
-                  </a>
+                  {pkg.isSoldOut ? (
+                    <button
+                      disabled
+                      className="flex-1 py-3 px-4 rounded-xl bg-charcoal/15 text-charcoal/40 font-bold text-center text-sm cursor-not-allowed"
+                    >
+                      Habis Terjual
+                    </button>
+                  ) : (
+                    <a
+                      href={getWhatsAppLink(pkg)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 py-3 px-4 rounded-xl bg-gold hover:bg-gold/90 text-maroon font-bold text-center text-sm transition-all duration-200"
+                    >
+                      Pesan Kuota
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
@@ -310,7 +349,7 @@ export default function PackageGrid({ filters }) {
               </p>
 
               {/* Specs Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 bg-cream/30 p-4 rounded-2xl border border-gold/10">
+              <div className={`grid gap-4 bg-cream/30 p-4 rounded-2xl border border-gold/10 ${selectedPackage.hotelMesir ? 'grid-cols-1 sm:grid-cols-3 md:grid-cols-5' : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-4'}`}>
                 <div className="text-center sm:text-left">
                   <span className="text-xs text-charcoal/60 uppercase block font-semibold">Durasi</span>
                   <span className="text-sm font-bold text-maroon">{selectedPackage.duration}</span>
@@ -323,6 +362,12 @@ export default function PackageGrid({ filters }) {
                   <span className="text-xs text-charcoal/60 uppercase block font-semibold">Hotel Madinah</span>
                   <span className="text-sm font-bold text-maroon">{selectedPackage.hotelMadinah}</span>
                 </div>
+                {selectedPackage.hotelMesir && (
+                  <div className="text-center sm:text-left">
+                    <span className="text-xs text-charcoal/60 uppercase block font-semibold">Hotel Mesir</span>
+                    <span className="text-sm font-bold text-maroon">{selectedPackage.hotelMesir}</span>
+                  </div>
+                )}
                 <div className="text-center sm:text-left">
                   <span className="text-xs text-charcoal/60 uppercase block font-semibold">Penerbangan</span>
                   <span className="text-sm font-bold text-maroon">{selectedPackage.flight.split(' ')[0]}</span>
@@ -393,24 +438,102 @@ export default function PackageGrid({ filters }) {
               </div>
               <div className="flex gap-4 w-full sm:w-auto">
                 <button
+                  onClick={() => setBrosurPackage(selectedPackage)}
+                  className="flex-1 sm:flex-none px-6 py-3 bg-gold text-maroon font-bold text-sm rounded-xl hover:bg-gold/90 shadow-md transition-all text-center"
+                >
+                  Brosur Digital
+                </button>
+                <button
                   onClick={() => setSelectedPackage(null)}
                   className="flex-1 sm:flex-none px-6 py-3 border border-charcoal/30 rounded-xl text-charcoal font-semibold text-sm hover:bg-charcoal/5 transition-all"
                 >
                   Tutup
                 </button>
-                <a
-                  href={getWhatsAppLink(selectedPackage)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 sm:flex-none px-8 py-3 bg-maroon text-white font-semibold text-sm rounded-xl hover:bg-maroon/90 shadow-md transition-all text-center flex items-center justify-center gap-2"
-                >
-                  Pesan via WhatsApp
-                </a>
+                {selectedPackage.isSoldOut ? (
+                  <button
+                    disabled
+                    className="flex-1 sm:flex-none px-8 py-3 bg-charcoal/15 text-charcoal/40 font-semibold text-sm rounded-xl cursor-not-allowed text-center"
+                  >
+                    Kuota Penuh
+                  </button>
+                ) : (
+                  <a
+                    href={getWhatsAppLink(selectedPackage)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 sm:flex-none px-8 py-3 bg-maroon text-white font-semibold text-sm rounded-xl hover:bg-maroon/90 shadow-md transition-all text-center flex items-center justify-center gap-2"
+                  >
+                    Pesan via WhatsApp
+                  </a>
+                )}
               </div>
             </div>
           </div>
         </div>
       )}
+
+      {/* ─── Brosur Digital Modal ─── */}
+      {brosurPackage && (
+        <BrosurModal pkg={brosurPackage} onClose={() => setBrosurPackage(null)} getWhatsAppLink={getWhatsAppLink} />
+      )}
     </section>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   BROSUR DIGITAL MODAL — Tampilan Brosur Image
+───────────────────────────────────────────────────────────────*/
+
+// Mapping bulan ke file brosur yang tersedia di /public
+const BROSUR_MAP = {
+  'Agustus': '/BrosurAgu26.png',
+  'Oktober': '/BrosurOct26.png',
+  'November': '/BrosurNov26.png',
+};
+
+function BrosurModal({ pkg, onClose, getWhatsAppLink }) {
+  const brosurSrc = BROSUR_MAP[pkg.month] ?? '/BrosurOct26.png';
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-slide-in"
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-xl flex flex-col items-center"
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute -top-12 right-0 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all shadow-md focus:outline-none mb-2"
+          aria-label="Tutup Brosur"
+        >
+          <X className="w-6 h-6" />
+        </button>
+
+        {/* Brochure Image */}
+        <div className="w-full overflow-hidden rounded-2xl border border-gold/30 shadow-2xl bg-charcoal">
+          <img
+            src={brosurSrc}
+            alt={`Brosur Digital Ichsan Kamil - ${pkg.title}`}
+            className="w-full max-h-[75vh] object-contain mx-auto"
+          />
+        </div>
+
+        {/* Action Button */}
+        <div className="w-full mt-4 flex gap-4">
+          <a
+            href={getWhatsAppLink(pkg)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 py-3 px-6 bg-gold hover:bg-yellow-400 text-maroon font-black text-sm rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2"
+          >
+            <MessageSquare className="w-4 h-4" />
+            Tanyakan Paket Ini via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
   );
 }

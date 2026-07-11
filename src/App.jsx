@@ -5,6 +5,7 @@ import PackageGrid from './components/PackageGrid';
 import Features from './components/Features';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
+import Gallery from './components/Gallery';
 import { HelpCircle, ChevronDown, MessageSquare } from 'lucide-react';
 
 export default function App() {
@@ -55,6 +56,9 @@ export default function App() {
 
       {/* Testimonials */}
       <Testimonials />
+
+      {/* Gallery Section */}
+      <Gallery />
 
       {/* FAQ Section */}
       <section id="faq" className="py-24 bg-white relative">

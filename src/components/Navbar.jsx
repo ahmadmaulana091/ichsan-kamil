@@ -18,6 +18,7 @@ export default function Navbar() {
     { name: 'Keunggulan', href: '#features' },
     { name: 'Paket Umrah', href: '#packages' },
     { name: 'Testimoni', href: '#testimonials' },
+    { name: 'Galeri', href: '#gallery' },
     { name: 'FAQ', href: '#faq' },
   ];
 
