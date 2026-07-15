@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import AdminWAModal from './AdminWAModal';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showWaPopup, setShowWaPopup] = useState(false);
+  const WA_MESSAGE = "Assalamualaikum, saya ingin tanya paket Umrah Ichsan Kamil";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +40,7 @@ export default function Navbar() {
   };
 
   return (
+    <>
     <nav
       className={`fixed top-0 left-0 right-0 z-50 glass-nav py-3 transition-all duration-400${isScrolled ? ' scrolled shadow-md' : ''}`}
     >
@@ -47,7 +51,7 @@ export default function Navbar() {
           <a href="#home" className="flex items-center space-x-2 group">
             {/* nav-logo class handles the white→original filter transition via CSS */}
             <img
-              src={isScrolled ? '/LogoRemoveBg.png' : '/LogoPutihRemoveBg.png'}
+              src={isScrolled ? '/logo/LogoRemoveBg.png' : '/logo/LogoPutihRemoveBg.png'}
               alt="Logo Ichsan Kamil"
               className="w-14 h-14 object-contain transition-opacity duration-400"
             />
@@ -83,15 +87,13 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <a
-              href="https://wa.me/6285720988031?text=Assalamualaikum,%20saya%20ingin%20tanya%20paket%20Umrah%20Ichsan%20Kamil"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setShowWaPopup(true)}
               className="nav-cta inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
             >
               <Phone className="w-4 h-4 mr-2" />
               Hubungi Kami
-            </a>
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -131,10 +133,8 @@ export default function Navbar() {
             </a>
           ))}
           <div className="pt-2">
-            <a
-              href="https://wa.me/6285720988031?text=Assalamualaikum,%20saya%20ingin%20tanya%20paket%20Umrah%20Ichsan%20Kamil"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => { setIsOpen(false); setShowWaPopup(true); }}
               className={`w-full flex items-center justify-center px-6 py-3 rounded-full text-base font-semibold shadow-md transition-all duration-200 ${isScrolled
                 ? 'text-cream bg-maroon hover:bg-maroon/90'
                 : 'text-maroon bg-white hover:bg-white/90'
@@ -142,10 +142,19 @@ export default function Navbar() {
             >
               <Phone className="w-5 h-5 mr-2" />
               Hubungi Kami (WhatsApp)
-            </a>
+            </button>
           </div>
         </div>
       </div>
     </nav>
+
+      {/* Admin WA Popup */}
+      {showWaPopup && (
+        <AdminWAModal
+          message={WA_MESSAGE}
+          onClose={() => setShowWaPopup(false)}
+        />
+      )}
+    </>
   );
 }

@@ -4,55 +4,49 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 const REVIEWS = [
   {
     id: 1,
-    name: "Bpk. H. Ahmad Fauzi",
-    role: "Pengusaha, Jakarta",
-    package: "Umrah Executive Gold - Sept 2025",
-    text: "Alhamdulillah, pengalaman umrah pertama bersama Ichsan Kamil sungguh luar biasa. Pelayanan mutawwif sangat membimbing dari rukun hingga ziarah. Kamar Swissôtel langsung nempel di pelataran Masjidil Haram, memudahkan saya mengajak orang tua shalat berjamaah di masjid.",
+    name: "Bpk.Subhanallah Salim & Ibu Dr. Winny Artarini ",
+    role: "Tenaga Kesehatan & Dokter, Jakarta",
+    text: "Pelayanan berkelas bintang empat. Tiket confirm sudah diberikan dari jauh-jauh hari serta airlines yang digunakan berkelas yaitu Saudia Airlines (Penerbangan langsung) sehingga membuat perjalanan panjang tidak terasa melelahkan. Transportasi privat dan bimbingan ziarah eksklusif dari Ustadz Pembimbing serta mutawwif memberi nilai spiritual yang sangat mendalam bagi keluarga kami.",
     stars: 5,
-    initials: "AF"
+    initials: "SS"
   },
   {
     id: 2,
-    name: "Ibu Hj. Siti Aminah",
-    role: "Pensiunan Guru, Bandung",
-    package: "Umrah Hemat Awal Musim - Agust 2025",
-    text: "Awalnya ragu ambil paket hemat karena takut hotelnya jauh sekali, ternyata jaraknya masih sangat dekat berkisar 400 meter. Makanan prasmanan Indonesia rasanya pas di lidah. Seluruh staf sangat ramah dan sabar membantu jamaah lansia seperti saya.",
+    name: "Bpk. Roby Suregar & Ibu Syifa Fauziah",
+    role: "Dinas Pertamanan & Pegawai Swasta, Jakarta",
+    text: "Alhamdulillah, pengalaman umrah pertama bersama Ichsan Kamil sungguh luar biasa. Pelayanan Ustadz Pembimbing & mutawwif sangat membimbing dari rukun hingga ziarah. Hotel dekat dengan Plataran Masjidil Haram, memudahkan untuk beribadah langsung  di masjidil haram maupun di masjid nabawi.",
     stars: 5,
-    initials: "SA"
+    initials: "RS"
   },
   {
     id: 3,
-    name: "Bpk. dr. Ridwan Malik",
-    role: "Dokter Spesialis, Jakarta",
-    package: "Umrah VIP Signature - Okt 2025",
-    text: "Pelayanan berkelas bintang lima. Tiket Business Class membuat perjalanan panjang tidak terasa melelahkan. Transportasi privat dan bimbingan ziarah eksklusif dari mutawwif lulusan Universitas Islam Madinah memberi nilai spiritual yang sangat mendalam bagi keluarga kami.",
+    name: "Ibu Hj. Muryanih Mahmud Rimin",
+    role: "Pensiunan ASN, Jakarta",
+    text: "Awalnya ragu ambil paket hemat karena takut hotelnya jauh sekali, ternyata jaraknya masih sangat dekat berkisar 200 meter. Makanan prasmanan Indonesia rasanya pas di lidah. Seluruh staf sangat ramah dan sabar membantu jamaah lansia seperti saya.",
     stars: 5,
-    initials: "RM"
+    initials: "MM"
   },
   {
     id: 4,
-    name: "Ibu Dewi Rahayu",
-    role: "Ibu Rumah Tangga, Jakarta",
-    package: "Umrah Reguler Plus - Nov 2025",
-    text: "Subhanallah, ini umrah kedua saya dan saya pilih Ichsan Kamil karena rekomendasi teman. Tidak mengecewakan sama sekali. Pembimbing ibadah sangat sabar menjelaskan setiap doa dan tata cara. Saya sangat terkesan dengan koordinasi yang rapi dari awal hingga pulang ke tanah air.",
+    name: "Sdr. Muhammad Agus Farhan & Anasya Nurlita Fahrani Dewi Rahayu",
+    role: "Karyawan Swasta, Jakarta",
+    text: "Alhamdulillah, ibadah umrah bersama istri berjalan sangat lancar. Akomodasi hotel bintang empat di Makkah dan Madinah benar-benar premium. Yang paling berkesan adalah penyampaian sejarah islam yang sangat berkesan dari pembimbing ibadah serta muthowif, serta memberikan waktu cukup untuk berdoa disetiap tempat bersejarah dan mustajab untuk berdoa.",
     stars: 5,
-    initials: "DR"
+    initials: "MA"
   },
   {
     id: 5,
-    name: "Bpk. Hendra Kusuma",
-    role: "Wiraswasta, Jakarta",
-    package: "Umrah Executive Gold - Des 2025",
-    text: "Alhamdulillah, ibadah umrah bersama istri berjalan sangat lancar. Akomodasi hotel bintang lima di Makkah dan Madinah benar-benar premium. Yang paling berkesan adalah guide lokal yang sangat berpengetahuan dan tidak pernah buru-buru, memberikan waktu cukup untuk berdoa di setiap tempat bersejarah.",
+    name: "Sdri. Shofwa Nurusysyifa",
+    role: "ASN, Jakarta",
+    text: "Saya sangat puas dengan layanan Ichsan Kamil. Dari Ticket Confirm dan PNR sudah diberikan dari jauh-jauh hari, proses pengurusan visa hingga kepulangan, semuanya profesional dan tepat waktu. Harga yang terjangkau tapi kualitas tidak murahan. Pasti akan merekomendasikan ke keluarga dan rekan-rekan.",
     stars: 5,
-    initials: "HK"
+    initials: "SN"
   },
   {
     id: 6,
-    name: "Ibu Hj. Nur Hasanah",
-    role: "ASN, Jakarta",
-    package: "Umrah Hemat Awal Musim - Jan 2026",
-    text: "Saya berangkat bersama grup kantor dan semuanya puas dengan layanan Ichsan Kamil. Dari proses pengurusan visa hingga kepulangan, semuanya profesional dan tepat waktu. Harga yang terjangkau tapi kualitas tidak murahan. Pasti akan merekomendasikan ke keluarga dan rekan-rekan.",
+    name: "Sdri. Kayla Denaneer",
+    role: "Mahasiswi, Jakarta",
+    text: "Subhanallah, ini umrah pertama saya dan orang tua saya memilihkan Ichsan Kamil. Tidak mengecewakan sama sekali. Pembimbing ibadah sangat sabar menjelaskan setiap doa dan tata cara serta frendly sehingga nyaman untuk saya yang anak kuliah an. Saya sangat terkesan dengan koordinasi yang rapi dari awal hingga pulang ke tanah air serta sangat kekeluargaan sekali baik anak muda maupun orang tua.",
     stars: 5,
     initials: "NH"
   }
@@ -142,9 +136,6 @@ export default function Testimonials() {
                   <p className="text-xs text-charcoal/60 leading-none mt-1">
                     {REVIEWS[activeIndex].role}
                   </p>
-                  <span className="inline-block mt-1 text-[10px] font-bold text-gold uppercase tracking-wider bg-maroon/5 px-2 py-0.5 rounded border border-gold/10">
-                    {REVIEWS[activeIndex].package}
-                  </span>
                 </div>
               </div>
 

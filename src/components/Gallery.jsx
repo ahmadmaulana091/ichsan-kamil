@@ -5,23 +5,23 @@ import GalleryCard from './GalleryCard';
 const GALLERY_ITEMS = [
   {
     id: 1,
-    src: '/gallery_tawaf.png',
-    title: 'Tawaf di Masjidil Haram',
-    caption: 'Jamaah Ichsan Kamil menunaikan ibadah tawaf mengelilingi Ka\'bah yang mulia di Makkah Al-Mukarramah.',
+    src: '/galery/Kabah.png',
+    title: `Ka'bah`,
+    caption: `Bukan sekadar perjalanan, tetapi panggilan istimewa dari Allah SWT. Mengabadikan momen berharga di hadapan Ka'bah bersama keluarga besar Ichsan Kamil.`,
     tag: 'Makkah',
     tagColor: 'bg-maroon',
   },
   {
     id: 2,
-    src: '/gallery_nabawi.png',
-    title: 'Ziarah Masjid Nabawi',
-    caption: 'Suasana khidmat jamaah bersholawat dan berdoa di pelataran Masjid Nabawi, Madinah Al-Munawwarah.',
+    src: '/galery/Thaif.png',
+    title: 'Thaif (City Tour)',
+    caption: 'Kebersamaan, senyuman, dan rasa syukur menjadi bagian indah dalam setiap langkah perjalanan umrah.',
     tag: 'Madinah',
     tagColor: 'bg-emerald-700',
   },
   {
     id: 3,
-    src: '/gallery_ziarah.png',
+    src: '/galery/JabalRahmah.png',
     title: 'Ziarah Tempat Bersejarah',
     caption: 'Rombongan jamaah Ichsan Kamil dalam program ziarah ke situs-situs bersejarah Islam bersama mutawwif berpengalaman.',
     tag: 'Ziarah',
@@ -29,7 +29,7 @@ const GALLERY_ITEMS = [
   },
   {
     id: 4,
-    src: '/gallery_makan.png',
+    src: '/galery/AzkaAlShafa.png',
     title: 'Makan Bersama Jamaah',
     caption: 'Kebersamaan jamaah saat menikmati hidangan prasmanan khas Indonesia & Arab yang disajikan di hotel.',
     tag: 'Kebersamaan',
@@ -37,16 +37,56 @@ const GALLERY_ITEMS = [
   },
   {
     id: 5,
-    src: '/gallery_keberangkatan.png',
-    title: 'Pelepasan & Keberangkatan',
-    caption: 'Momen haru keberangkatan rombongan jamaah dari Bandara Internasional Soekarno-Hatta menuju Tanah Suci.',
-    tag: 'Keberangkatan',
+    src: '/galery/Payung.png',
+    title: 'Pelataran Masjid Nabawi',
+    caption: 'Di bawah teduhnya payung Masjid Nabawi, dua hati melangkah bersama, mengawali perjalanan cinta yang dipenuhi doa, iman, dan keberkahan.',
+    tag: 'Momen Spesial',
     tagColor: 'bg-purple-700',
+  },
+  {
+    id: 6,
+    src: '/galery/MasjidQuba.png',
+    title: "Masjid Quba",
+    caption: "Salah satu destinasi bersejarah yang menjadi saksi awal peradaban Islam.",
+    tag: 'Madinah',
+    tagColor: 'bg-maroon',
+  },
+  {
+    id: 7,
+    src: '/galery/MenaraJamMakkah.png',
+    title: 'Masjidil Haram',
+    caption: 'Jamaah Ichsan Kamil berfoto bersama di depan Masjidil Haram dengan latar Menara Jam Makkah, mengabadikan momen kebersamaan yang penuh syukur dan kebahagiaan.',
+    tag: 'Makkah',
+    tagColor: 'bg-rose-700',
+  },
+  {
+    id: 8,
+    src: '/galery/MasjidNabawi.png',
+    title: 'Masjid Nabawi',
+    caption: 'Jamaah Ichsan Kamil berfoto bersama di pelataran Masjid Nabawi, Madinah, dengan latar belakang Kubah Hijau yang ikonik. Dalam suasana cerah dan penuh kebahagiaan, para jamaah mengabadikan momen kebersamaan di salah satu tempat paling mulia bagi umat Islam.',
+    tag: 'Madinah',
+    tagColor: 'bg-emerald-700',
+  },
+  {
+    id: 9,
+    src: '/galery/gallery_tawaf.png',
+    title: 'Makkah',
+    caption: 'Momen penuh haru saat mengawali perjalanan cinta ke Tanah Suci untuk menunaikan ibadah umrah.',
+    tag: 'Momen',
+    tagColor: 'bg-purple-700',
+  },
+  {
+    id: 10,
+    src: '/galery/gallery_hotel.png',
+    title: 'Hotel Bintang di Makkah',
+    caption: 'Fasilitas hotel bintang yang nyaman dengan pemandangan langsung ke Masjidil Haram, memudahkan jamaah beribadah sepanjang waktu.',
+    tag: 'Fasilitas',
+    tagColor: 'bg-sky-700',
   },
 ];
 
 export default function Gallery() {
-  const [lightbox, setLightbox] = useState(null); // index of active photo
+  const [lightbox, setLightbox] = useState(null);
 
   const openLightbox = (idx) => setLightbox(idx);
   const closeLightbox = () => setLightbox(null);
@@ -63,7 +103,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="py-24 bg-white relative overflow-hidden"
+      className="py-24 bg-cream relative overflow-hidden"
       onKeyDown={handleKeyDown}
       tabIndex={-1}
     >
@@ -84,58 +124,90 @@ export default function Gallery() {
           </h2>
           <div className="h-1 w-24 bg-gold mx-auto mb-6 rounded-full" />
           <p className="text-charcoal/70 text-base">
-            Setiap momen ibadah adalah kenangan yang tak ternilai. Berikut adalah rekam jejak perjalanan suci bersama jamaah Ichsan Kamil Tour & Travel.
+            Setiap momen ibadah adalah kenangan yang tak ternilai. Berikut adalah rekam jejak perjalanan suci bersama jamaah Ichsan Kamil Tour &amp; Travel.
           </p>
         </div>
 
-        {/* Masonry-style Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-4 auto-rows-[220px]">
-
-          {/* Card 1 – large (spans 7 cols, 2 rows) */}
-          <GalleryCard item={GALLERY_ITEMS[0]} onClick={() => openLightbox(0)}
-            className="col-span-2 md:col-span-2 lg:col-span-7 row-span-2"
+        {/* ── BLOCK A: Hero (left, tall) + 2 stacked right ── */}
+        {/* 3 photos: [0] big hero | [1] top-right | [2] bottom-right */}
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-3 mb-3" style={{ gridTemplateRows: 'repeat(2, 260px)' }}>
+          <GalleryCard
+            item={GALLERY_ITEMS[0]}
+            onClick={() => openLightbox(0)}
+            className="col-span-2 lg:col-span-8 row-span-2"
           />
-
-          {/* Card 2 */}
-          <GalleryCard item={GALLERY_ITEMS[1]} onClick={() => openLightbox(1)}
-            className="col-span-1 lg:col-span-5"
+          <GalleryCard
+            item={GALLERY_ITEMS[1]}
+            onClick={() => openLightbox(1)}
+            className="hidden lg:block lg:col-span-4"
           />
-
-          {/* Card 3 */}
-          <GalleryCard item={GALLERY_ITEMS[2]} onClick={() => openLightbox(2)}
-            className="col-span-1 lg:col-span-5"
-          />
-
-          {/* Card 4 */}
-          <GalleryCard item={GALLERY_ITEMS[3]} onClick={() => openLightbox(3)}
-            className="col-span-1 lg:col-span-6"
-          />
-
-          {/* Card 5 */}
-          <GalleryCard item={GALLERY_ITEMS[4]} onClick={() => openLightbox(4)}
-            className="col-span-1 lg:col-span-6"
+          <GalleryCard
+            item={GALLERY_ITEMS[2]}
+            onClick={() => openLightbox(2)}
+            className="hidden lg:block lg:col-span-4"
           />
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-12 text-center">
-          <p className="text-charcoal/60 text-sm mb-4">Ingin melihat lebih banyak dokumentasi perjalanan kami?</p>
-          <a
-            href="https://wa.me/6285720988031?text=Assalamualaikum,%20saya%20ingin%20melihat%20lebih%20banyak%20foto%20kegiatan%20Ichsan%20Kamil"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-maroon text-maroon font-semibold text-sm hover:bg-maroon hover:text-white transition-all duration-200"
-          >
-            <Camera className="w-4 h-4" />
-            Minta Lebih Banyak Foto via WhatsApp
-          </a>
+        {/* ── BLOCK B: 3 equal-width cards ── */}
+        {/* 3 photos: [1] [2] [3] on mobile, [3][4][5] on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3" style={{ gridTemplateRows: '240px' }}>
+          {/* On mobile show cards 1 & 2 here (hidden on lg since shown in block A) */}
+          <GalleryCard
+            item={GALLERY_ITEMS[1]}
+            onClick={() => openLightbox(1)}
+            className="lg:hidden"
+          />
+          <GalleryCard
+            item={GALLERY_ITEMS[2]}
+            onClick={() => openLightbox(2)}
+            className="lg:hidden"
+          />
+          <GalleryCard item={GALLERY_ITEMS[3]} onClick={() => openLightbox(3)} className="hidden sm:block" />
+          <GalleryCard item={GALLERY_ITEMS[4]} onClick={() => openLightbox(4)} className="hidden sm:block" />
+          <GalleryCard item={GALLERY_ITEMS[5]} onClick={() => openLightbox(5)} className="hidden sm:block" />
+        </div>
+
+        {/* Mobile row for cards 3-5 */}
+        <div className="grid grid-cols-1 gap-3 mb-3 sm:hidden" style={{ gridTemplateRows: '220px' }}>
+          <GalleryCard item={GALLERY_ITEMS[3]} onClick={() => openLightbox(3)} />
+          <GalleryCard item={GALLERY_ITEMS[4]} onClick={() => openLightbox(4)} />
+          <GalleryCard item={GALLERY_ITEMS[5]} onClick={() => openLightbox(5)} />
+        </div>
+
+        {/* ── BLOCK C: Left tall | Wide top-right | 2 smaller bottom-right ── */}
+        {/* 4 photos: [6] tall left | [7] wide right | [8]+[9] bottom right */}
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-3" style={{ gridTemplateRows: 'repeat(2, 230px)' }}>
+          {/* [6] tall left */}
+          <GalleryCard
+            item={GALLERY_ITEMS[6]}
+            onClick={() => openLightbox(6)}
+            className="col-span-1 lg:col-span-4 row-span-2"
+          />
+          {/* [7] wide, top right */}
+          <GalleryCard
+            item={GALLERY_ITEMS[7]}
+            onClick={() => openLightbox(7)}
+            className="col-span-1 lg:col-span-8"
+          />
+          {/* [8] bottom right, left half */}
+          <GalleryCard
+            item={GALLERY_ITEMS[8]}
+            onClick={() => openLightbox(8)}
+            className="col-span-1 lg:col-span-4"
+          />
+          {/* [9] bottom right, right half */}
+          <GalleryCard
+            item={GALLERY_ITEMS[9]}
+            onClick={() => openLightbox(9)}
+            className="col-span-1 lg:col-span-4"
+          />
         </div>
       </div>
 
       {/* Lightbox Modal */}
       {lightbox !== null && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-slide-in"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
           onClick={closeLightbox}
         >
           <div
@@ -181,6 +253,17 @@ export default function Gallery() {
               <span className="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-black/50 text-white text-xs font-semibold">
                 {lightbox + 1} / {GALLERY_ITEMS.length}
               </span>
+
+              {/* Dot indicators */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+                {GALLERY_ITEMS.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={(e) => { e.stopPropagation(); setLightbox(i); }}
+                    className={`rounded-full transition-all duration-300 ${i === lightbox ? 'w-5 h-1.5 bg-gold' : 'w-1.5 h-1.5 bg-white/40 hover:bg-white/70'}`}
+                  />
+                ))}
+              </div>
             </div>
 
             {/* Caption */}
@@ -198,5 +281,3 @@ export default function Gallery() {
     </section>
   );
 }
-
-

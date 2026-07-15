@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Star, Clock, Hotel, Plane, ShieldCheck, X, FileText, CheckCircle2, ChevronRight, Phone, MapPin, Globe, MessageSquare } from 'lucide-react';
+import AdminWAModal from './AdminWAModal';
 
 const PACKAGES = [
   {
@@ -17,7 +18,7 @@ const PACKAGES = [
     badge: "Eksklusif VIP",
     isSoldOut: true,
     tagline: "Pengalaman ibadah termewah dengan akomodasi bintang 5 premium.",
-    brosurUrl: "https://wa.me/6285720988031?text=Assalamualaikum%20Ichsan%20Kamil%2C%20saya%20ingin%20meminta%20brosur%20paket%20Umrah%20Oktobert%20(2026)",
+    brosurUrl: "https://wa.me/6287771000018?text=Assalamualaikum%20Ichsan%20Kamil%2C%20saya%20ingin%20meminta%20brosur%20paket%20Umrah%20Oktobert%20(2026)",
     highlights: ["2x Sholat Jum'at", "Tiket PP + Visa + Asuransi", "Bus City Tour Exclusive"],
     itinerary: [
       "Hari 1: Berkumpul di PT Ichsan Kami pukul 03.30 WIB pelepasan dan menuju Bandara Terminal 3 (5 jam sebelum keberangkatan). Sarapan, briefing dan check-in pesawat. Pukul 09.10 Pesawat SV817 By Saudia Airlines Take Off menuju Jeddah. Landing pukul 14.40 waktu setempat. Menuju hotel beristirahat sejenak, makan malam dan persiapan pelaksaaan Umroh Ke-1 (Miqot Umroh ke-1 dilakukan di pesawat atau dibandara melihat situasi dan kondisi).",
@@ -45,12 +46,12 @@ const PACKAGES = [
     type: "Regular",
     duration: "9 Hari",
     flight: "Saudi Arabian Airlines (Direct)",
-    hotelMadinah: "Jawharat Al Rasheed / Setaraf (★3)",
-    hotelMakkah: "Azka Al Safa / Setaraf (★5)",
-    hotelStars: 3,
+    hotelMadinah: "Jawharat Al Rasheed / Setaraf (★4)",
+    hotelMakkah: "Azka Al Safa / Setaraf (★4)",
+    hotelStars: 4,
     badge: "Oktober 2026",
     tagline: "Ideal untuk jamaah yang mencari perjalanan hemat dengan bimbingan penuh kenyamanan.",
-    brosurUrl: "https://wa.me/6285720988031?text=Assalamualaikum%20Ichsan%20Kamil%2C%20saya%20ingin%20meminta%20brosur%20paket%20Umrah%20Oktobert%20(2026)",
+    brosurUrl: "https://wa.me/6287771000018?text=Assalamualaikum%20Ichsan%20Kamil%2C%20saya%20ingin%20meminta%20brosur%20paket%20Umrah%20Oktobert%20(2026)",
     highlights: ["Jarak Hotel Strategis", "Free Zam-Zam 5 ltr", "Percetakan Al-Qur'an"],
     itinerary: [
       "Hari 1: Berkumpul Bandara International Soekarno Hatta Terminal 2F (5 jam sebelum keberangkatan) briefing dan check-in pesawat.",
@@ -74,14 +75,14 @@ const PACKAGES = [
     month: "November",
     type: "Plus",
     duration: "12 Hari",
-    flight: "Qatar Airways / Saudia Airlines (Direct)",
+    flight: "Saudia Airlines / Qatar Airways / Emirates (Direct)",
     hotelMadinah: "Royal Andalus / Setaraf (★4)",
     hotelMakkah: "Elaf Al Bait / Setaraf (★4)",
     hotelMesir: "Front Pyramid / Setaraf (★4)",
     hotelStars: 4,
     badge: "November 2026",
     tagline: "Padukan kesucian ibadah Umrah di Tanah Suci dengan keajaiban peradaban Islam di Bumi Para Nabi, Mesir.",
-    brosurUrl: "https://wa.me/6285720988031?text=Assalamualaikum%20Ichsan%20Kamil%2C%20saya%20ingin%20meminta%20brosur%20paket%20Umrah%20Plus%20Mesir",
+    brosurUrl: "https://wa.me/6287771000018?text=Assalamualaikum%20Ichsan%20Kamil%2C%20saya%20ingin%20meminta%20brosur%20paket%20Umrah%20Plus%20Mesir",
     highlights: ["Wisata Piramida Giza & Sphinx", "Hotel Bintang 4 Tiga Kota", "City Tour Kairo & Alexandria"],
     itinerary: [
       "Hari 1: Berkumpul di PT Ichsan Kamil pukul 05.00 WIB. Pelepasan jamaah dan menuju Bandara Soekarno-Hatta Terminal 3. Briefing perjalanan, check-in, dan boarding pesawat EgyptAir/Saudia menuju Madinah via transit.",
@@ -99,8 +100,8 @@ const PACKAGES = [
       "Hari 13: Sarapan di hotel. Day Trip ke Alexandria (3 jam dari Kairo): Benteng Qaitbay (bekas lokasi Mercusuar Alexandria, salah satu Keajaiban Dunia Kuno). Perpustakaan Alexandrina (Bibliotheca Alexandrina). Masjid Abu Abbas Al-Mursi. Pantai Mediterania & Corniche Alexandria. Makan siang seafood khas pesisir. Kembali ke Kairo. Makan malam dan persiapan kepulangan.",
       "Hari 14: Sarapan pagi di hotel. Check-out. Transfer ke Bandara Internasional Cairo untuk penerbangan kembali ke Jakarta. Tiba di Bandara Soekarno-Hatta. Perjalanan Umrah Plus Mesir selesai — membawa oleh-oleh iman dan kenangan peradaban."
     ],
-    inclusions: ["Visa Umrah Resmi & Asuransi KSA", "Visa Mesir (Egypt Visa on Arrival diurus panitia)", "Tiket Pesawat PP EgyptAir/Saudia", "Hotel Bintang 5: Pullman Madinah, Elaf Al Bait & Front Pyramid", "Bus AC Eksklusif (Madinah-Makkah & di Mesir)", "Tour Leader & Mutawwif Berpengalaman", "Pemandu Wisata Lokal Mesir (berbahasa Indonesia)", "Katering 3x Sehari (Tanah Suci) + Makan siang & malam (Mesir)", "Tiket Masuk Piramida Giza, Sphinx & Museum Mesir", "Perlengkapan Umrah Lengkap (koper, ihram/mukena, dll)", "Air Zamzam 5 Liter"],
-    exclusions: ["Pembuatan Passport & Suntik Meningitis", "Biaya Laundry & Kebutuhan Pribadi", "Tips Pemandu Lokal & Driver", "Kelebihan Bagasi", "Pengeluaran Pribadi Selama di Mesir"]
+    inclusions: ["Visa Umrah Resmi & Asuransi KSA", "Visa Mesir (Egypt Visa on Arrival diurus panitia)", "Tiket Pesawat PP Saudia Airlines / Qatar Airways / Emirates", "Hotel Bintang 4: Royal Andalus Madinah, Elaf Al Bait & Front Pyramid", "Bus AC Eksklusif (Madinah-Makkah & di Mesir)", "Tour Leader & Mutawwif Berpengalaman", "Pemandu Wisata Lokal Mesir (berbahasa Indonesia)", "Katering 3x Sehari (Tanah Suci) + Makan siang & malam (Mesir)", "Tiket Masuk Piramida Giza, Sphinx & Museum Mesir", "Perlengkapan Umrah Lengkap (koper, ihram/mukena, dll)", "Air Zamzam 5 Liter"],
+    exclusions: ["Pembuatan Passport & Suntik Meningitis", "Biaya Laundry & Kebutuhan Pribadi", "Kelebihan Bagasi", "Pengeluaran Pribadi Selama di Mesir"]
   },
   // {
   //   id: 4,
@@ -116,7 +117,7 @@ const PACKAGES = [
   //   hotelStars: 5,
   //   badge: "Ramadhan Spesial",
   //   tagline: "Rasakan nikmatnya ibadah puasa dan tarawih di dua Masjid Suci umat Islam.",
-  //   brosurUrl: "https://wa.me/6285720988031?text=Assalamualaikum%20Ichsan%20Kamil%2C%20saya%20ingin%20meminta%20brosur%20paket%20Umrah%20Spesial%20Ramadhan%20(Rp%2044.500.000)",
+  //   brosurUrl: "https://wa.me/6287771000018?text=Assalamualaikum%20Ichsan%20Kamil%2C%20saya%20ingin%20meminta%20brosur%20paket%20Umrah%20Spesial%20Ramadhan%20(Rp%2044.500.000)",
   //   highlights: ["Puasa di Masjid Nabawi & Haram", "I'tikaf Ramadhan Terbimbing", "Paket 15 Hari Panjang"],
   //   itinerary: [
   //     "Hari 1: Jakarta - Madinah. Istirahat di hotel.",
@@ -132,9 +133,11 @@ const PACKAGES = [
   // }
 ];
 
+
 export default function PackageGrid({ filters }) {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [brosurPackage, setBrosurPackage] = useState(null);
+  const [waMessage, setWaMessage] = useState(null);
 
   // Filtering Logic
   const filteredPackages = PACKAGES.filter(pkg => {
@@ -155,9 +158,11 @@ export default function PackageGrid({ filters }) {
     return true;
   });
 
-  const getWhatsAppLink = (pkg) => {
-    const message = `Assalamualaikum Ichsan Kamil, saya ingin menanyakan lebih lanjut mengenai *${pkg.title}* (${pkg.price}) durasi ${pkg.duration}. Mohon informasi ketersediaan kuota.`;
-    return `https://wa.me/6285720988031?text=${encodeURIComponent(message)}`;
+  const getWhatsAppMessage = (pkg) =>
+    `Assalamualaikum Ichsan Kamil, saya ingin menanyakan lebih lanjut mengenai *${pkg.title}* (${pkg.price}) durasi ${pkg.duration}. Mohon informasi ketersediaan kuota.`;
+
+  const handleOrderClick = (pkg) => {
+    setWaMessage(getWhatsAppMessage(pkg));
   };
 
   return (
@@ -297,14 +302,12 @@ export default function PackageGrid({ filters }) {
                       Habis Terjual
                     </button>
                   ) : (
-                    <a
-                      href={getWhatsAppLink(pkg)}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button
+                      onClick={() => handleOrderClick(pkg)}
                       className="flex-1 py-3 px-4 rounded-xl bg-gold hover:bg-gold/90 text-maroon font-bold text-center text-sm transition-all duration-200"
                     >
                       Pesan Kuota
-                    </a>
+                    </button>
                   )}
                 </div>
               </div>
@@ -370,7 +373,7 @@ export default function PackageGrid({ filters }) {
                 )}
                 <div className="text-center sm:text-left">
                   <span className="text-xs text-charcoal/60 uppercase block font-semibold">Penerbangan</span>
-                  <span className="text-sm font-bold text-maroon">{selectedPackage.flight.split(' ')[0]}</span>
+                  <span className="text-sm font-bold text-maroon">{selectedPackage.flight}</span>
                 </div>
               </div>
 
@@ -457,14 +460,13 @@ export default function PackageGrid({ filters }) {
                     Kuota Penuh
                   </button>
                 ) : (
-                  <a
-                    href={getWhatsAppLink(selectedPackage)}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => handleOrderClick(selectedPackage)}
                     className="flex-1 sm:flex-none px-8 py-3 bg-maroon text-white font-semibold text-sm rounded-xl hover:bg-maroon/90 shadow-md transition-all text-center flex items-center justify-center gap-2"
                   >
+                    <MessageSquare className="w-4 h-4" />
                     Pesan via WhatsApp
-                  </a>
+                  </button>
                 )}
               </div>
             </div>
@@ -474,7 +476,19 @@ export default function PackageGrid({ filters }) {
 
       {/* ─── Brosur Digital Modal ─── */}
       {brosurPackage && (
-        <BrosurModal pkg={brosurPackage} onClose={() => setBrosurPackage(null)} getWhatsAppLink={getWhatsAppLink} />
+        <BrosurModal
+          pkg={brosurPackage}
+          onClose={() => setBrosurPackage(null)}
+          onOrderClick={handleOrderClick}
+        />
+      )}
+
+      {/* ─── Admin WA Popup ─── */}
+      {waMessage && (
+        <AdminWAModal
+          message={waMessage}
+          onClose={() => setWaMessage(null)}
+        />
       )}
     </section>
   );
@@ -486,12 +500,12 @@ export default function PackageGrid({ filters }) {
 
 // Mapping bulan ke file brosur yang tersedia di /public
 const BROSUR_MAP = {
-  'Agustus': '/BrosurAgu26.png',
-  'Oktober': '/BrosurOct26.png',
-  'November': '/BrosurNov26.png',
+  'Agustus': '/brosur/BrosurAgu26.png',
+  'Oktober': '/brosur/BrosurOct26.png',
+  'November': '/brosur/BrosurNov26.png',
 };
 
-function BrosurModal({ pkg, onClose, getWhatsAppLink }) {
+function BrosurModal({ pkg, onClose, onOrderClick }) {
   const brosurSrc = BROSUR_MAP[pkg.month] ?? '/BrosurOct26.png';
 
   return (
@@ -523,17 +537,17 @@ function BrosurModal({ pkg, onClose, getWhatsAppLink }) {
 
         {/* Action Button */}
         <div className="w-full mt-4 flex gap-4">
-          <a
-            href={getWhatsAppLink(pkg)}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => { onClose(); onOrderClick(pkg); }}
             className="flex-1 py-3 px-6 bg-gold hover:bg-yellow-400 text-maroon font-black text-sm rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2"
           >
             <MessageSquare className="w-4 h-4" />
             Tanyakan Paket Ini via WhatsApp
-          </a>
+          </button>
         </div>
       </div>
     </div>
   );
 }
+
+

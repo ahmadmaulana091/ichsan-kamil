@@ -6,6 +6,7 @@ import Features from './components/Features';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
+import AdminWAModal from './components/AdminWAModal';
 import { HelpCircle, ChevronDown, MessageSquare } from 'lucide-react';
 
 export default function App() {
@@ -16,6 +17,8 @@ export default function App() {
   });
 
   const [activeFaq, setActiveFaq] = useState(null);
+  const [showWaPopup, setShowWaPopup] = useState(false);
+  const WA_MESSAGE_CS = "Assalamualaikum, saya ingin tanya mengenai syarat pendaftaran Umrah";
 
   const faqs = [
     {
@@ -61,7 +64,7 @@ export default function App() {
       <Gallery />
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24 bg-white relative">
+      <section id="faq" className="py-24 bg-cream relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
           {/* Header */}
@@ -111,15 +114,13 @@ export default function App() {
               <h4 className="font-serif text-lg font-bold text-maroon">Punya Pertanyaan Lain?</h4>
               <p className="text-xs sm:text-sm text-charcoal/70 mt-1">Staf CS kami siap melayani dan menjawab konsultasi Umrah Anda 24/7.</p>
             </div>
-            <a
-              href="https://wa.me/6285720988031?text=Assalamualaikum,%20saya%20ingin%20tanya%20mengenai%20syarat%20pendaftaran%20Umrah"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setShowWaPopup(true)}
               className="px-6 py-3 bg-maroon text-white text-sm font-bold rounded-xl hover:bg-maroon/90 shadow-md transition-all flex items-center gap-2"
             >
               <MessageSquare className="w-4 h-4 text-gold" />
               Chat CS (WhatsApp)
-            </a>
+            </button>
           </div>
 
         </div>
@@ -127,6 +128,14 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Admin WA Popup */}
+      {showWaPopup && (
+        <AdminWAModal
+          message={WA_MESSAGE_CS}
+          onClose={() => setShowWaPopup(false)}
+        />
+      )}
     </div>
   );
 }

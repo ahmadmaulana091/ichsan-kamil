@@ -33,7 +33,7 @@ export default function Footer() {
             <div className="flex flex-col space-y-0">
               {/* Brand Logo + Name */}
               <div className="flex items-center space-x-3">
-                <img src="/logo.png" alt="Logo Ichsan Kamil" className="w-14 h-14 object-contain" />
+                <img src="/logo/logo.png" alt="Logo Ichsan Kamil" className="w-14 h-14 object-contain" />
                 <div>
                   <span className="font-serif font-bold text-xl text-white tracking-wide block leading-none">
                     ICHSAN KAMIL
@@ -46,7 +46,7 @@ export default function Footer() {
 
               {/* Kemenag Badge */}
               <img
-                src="/LogoKemenagRemoveBg.png"
+                src="/logo/LogoKemenagRemoveBg.png"
                 alt="Logo Kementerian Agama RI"
                 className="w-70 h-70 object-contain opacity-90 -mt-25"
               />
@@ -138,6 +138,24 @@ export default function Footer() {
                   Testimoni
                 </a>
               </li>
+              <li>
+                <a
+                  href="#gallery"
+                  onClick={(e) => handleScrollTo(e, '#gallery')}
+                  className="hover:text-gold hover:underline transition-colors"
+                >
+                  Galery
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#faq"
+                  onClick={(e) => handleScrollTo(e, '#faq')}
+                  className="hover:text-gold hover:underline transition-colors"
+                >
+                  FAQ
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -153,11 +171,16 @@ export default function Footer() {
                   Jl. Durian No.47, RT.4/RW.4, Jagakarsa, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12620
                 </span>
               </li>
-              <li className="flex items-center">
-                <Phone className="w-5 h-5 text-gold mr-3 flex-shrink-0" />
-                <a href="tel:085720988031" className="hover:text-gold transition-colors">
-                  082260001116
-                </a>
+              <li className="flex items-start">
+                <Phone className="w-5 h-5 text-gold mr-3 mt-0.5 flex-shrink-0" />
+                <div className="flex flex-col gap-1">
+                  <a href="tel:087771000018" className="hover:text-gold transition-colors">
+                    087771000018 <span className="text-white/40 text-xs">(Admin 1)</span>
+                  </a>
+                  <a href="tel:08131306345" className="hover:text-gold transition-colors">
+                    08131306345 <span className="text-white/40 text-xs">(Admin 2)</span>
+                  </a>
+                </div>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 text-gold mr-3 flex-shrink-0" />

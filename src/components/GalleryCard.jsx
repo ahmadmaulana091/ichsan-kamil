@@ -28,7 +28,7 @@ export default function GalleryCard({ item, onClick, className = '' }) {
 
       {/* Dark & Gold Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300" />
-      
+
       {/* Glassmorphic Category Tag with Accent Dot */}
       <span className="absolute top-4 left-4 flex items-center gap-2 backdrop-blur-md bg-black/40 border border-white/10 px-3 py-1 rounded-full text-white text-[10px] font-bold uppercase tracking-widest shadow-md">
         <span className={`w-1.5 h-1.5 rounded-full ${item.tagColor || 'bg-gold'} shadow-sm`} />
@@ -45,7 +45,7 @@ export default function GalleryCard({ item, onClick, className = '' }) {
         <h3 className="font-serif text-white font-bold text-base sm:text-lg lg:text-xl leading-snug drop-shadow-md group-hover:text-gold transition-colors duration-300">
           {item.title}
         </h3>
-        
+
         {/* Expanded Details on Hover */}
         <div className="max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 overflow-hidden transition-all duration-500 ease-in-out">
           <p className="text-white/80 text-xs mt-2 leading-relaxed font-light">
