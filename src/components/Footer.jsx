@@ -192,7 +192,7 @@ export default function Footer() {
                 <Clock className="w-5 h-5 text-gold mr-3 mt-0.5 flex-shrink-0" />
                 <div>
                   <span className="block font-semibold">Jam Operasional:</span>
-                  <span className="text-xs">Senin - Sabtu: 08.00 - 17.00 WIB</span>
+                  <span className="text-xs">Senin - Sabtu: 09.00 - 17.00 WIB</span>
                 </div>
               </li>
             </ul>

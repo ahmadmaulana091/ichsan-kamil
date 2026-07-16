@@ -14,7 +14,7 @@ const FEATURES = [
   },
   {
     icon: Building2,
-    title: "Hotel Bintang & Strategis",
+    title: "Hotel Berbintang & Strategis",
     desc: "Akomodasi hotel berkualitas bintang 4 & 5 yang terletak dekat atau langsung berada di pelataran Masjidil Haram & Nabawi."
   },
   {

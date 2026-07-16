@@ -49,6 +49,14 @@ const REVIEWS = [
     text: "Subhanallah, ini umrah pertama saya dan orang tua saya memilihkan Ichsan Kamil. Tidak mengecewakan sama sekali. Pembimbing ibadah sangat sabar menjelaskan setiap doa dan tata cara serta frendly sehingga nyaman untuk saya yang anak kuliah an. Saya sangat terkesan dengan koordinasi yang rapi dari awal hingga pulang ke tanah air serta sangat kekeluargaan sekali baik anak muda maupun orang tua.",
     stars: 5,
     initials: "NH"
+  },
+  {
+    id: 7,
+    name: "Bpk. Kartiman, S. H & Ibu Asih",
+    role: "Polisi, Jakarta",
+    text: "Pengalaman yang luar biasa dan tak kan pernah terlupakan umroh bersama Ichsan Kamil, diberikan pelayanan untuk dapat mencium Kiswah dan Alhamdulillah dapat mencium langsung kiswah. MasyAllah TabarakAllah.",
+    stars: 5,
+    initials: "KA"
   }
 ];
 
