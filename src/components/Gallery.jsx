@@ -3,86 +3,16 @@ import { X, Camera, ChevronLeft, ChevronRight } from 'lucide-react';
 import GalleryCard from './GalleryCard';
 
 const GALLERY_ITEMS = [
-  {
-    id: 1,
-    src: '/galery/Kabah.png',
-    title: `Ka'bah`,
-    caption: `Bukan sekadar perjalanan, tetapi panggilan istimewa dari Allah SWT. Mengabadikan momen berharga di hadapan Ka'bah bersama keluarga besar Ichsan Kamil.`,
-    tag: 'Makkah',
-    tagColor: 'bg-maroon',
-  },
-  {
-    id: 2,
-    src: '/galery/Thaif.png',
-    title: 'Thaif (City Tour)',
-    caption: 'Kebersamaan, senyuman, dan rasa syukur menjadi bagian indah dalam setiap langkah perjalanan umrah.',
-    tag: 'Madinah',
-    tagColor: 'bg-emerald-700',
-  },
-  {
-    id: 3,
-    src: '/galery/JabalRahmah.png',
-    title: 'Ziarah Tempat Bersejarah',
-    caption: 'Rombongan jamaah Ichsan Kamil dalam program ziarah ke situs-situs bersejarah Islam bersama mutawwif berpengalaman.',
-    tag: 'Ziarah',
-    tagColor: 'bg-amber-700',
-  },
-  {
-    id: 4,
-    src: '/galery/AzkaAlShafa.png',
-    title: 'Makan Bersama Jamaah',
-    caption: 'Kebersamaan jamaah saat menikmati hidangan prasmanan khas Indonesia & Arab yang disajikan di hotel.',
-    tag: 'Kebersamaan',
-    tagColor: 'bg-blue-700',
-  },
-  {
-    id: 5,
-    src: '/galery/Payung.png',
-    title: 'Pelataran Masjid Nabawi',
-    caption: 'Di bawah teduhnya payung Masjid Nabawi, dua hati melangkah bersama, mengawali perjalanan cinta yang dipenuhi doa, iman, dan keberkahan.',
-    tag: 'Momen Spesial',
-    tagColor: 'bg-purple-700',
-  },
-  {
-    id: 6,
-    src: '/galery/MasjidQuba.png',
-    title: "Masjid Quba",
-    caption: "Salah satu destinasi bersejarah yang menjadi saksi awal peradaban Islam.",
-    tag: 'Madinah',
-    tagColor: 'bg-maroon',
-  },
-  {
-    id: 7,
-    src: '/galery/MenaraJamMakkah.png',
-    title: 'Masjidil Haram',
-    caption: 'Jamaah Ichsan Kamil berfoto bersama di depan Masjidil Haram dengan latar Menara Jam Makkah, mengabadikan momen kebersamaan yang penuh syukur dan kebahagiaan.',
-    tag: 'Makkah',
-    tagColor: 'bg-rose-700',
-  },
-  {
-    id: 8,
-    src: '/galery/MasjidNabawi.png',
-    title: 'Masjid Nabawi',
-    caption: 'Jamaah Ichsan Kamil berfoto bersama di pelataran Masjid Nabawi, Madinah, dengan latar belakang Kubah Hijau yang ikonik. Dalam suasana cerah dan penuh kebahagiaan, para jamaah mengabadikan momen kebersamaan di salah satu tempat paling mulia bagi umat Islam.',
-    tag: 'Madinah',
-    tagColor: 'bg-emerald-700',
-  },
-  {
-    id: 9,
-    src: '/galery/gallery_tawaf.png',
-    title: 'Makkah',
-    caption: 'Momen penuh haru saat mengawali perjalanan cinta ke Tanah Suci untuk menunaikan ibadah umrah.',
-    tag: 'Momen',
-    tagColor: 'bg-purple-700',
-  },
-  {
-    id: 10,
-    src: '/galery/gallery_hotel.png',
-    title: 'Hotel Bintang di Makkah',
-    caption: 'Fasilitas hotel bintang yang nyaman dengan pemandangan langsung ke Masjidil Haram, memudahkan jamaah beribadah sepanjang waktu.',
-    tag: 'Fasilitas',
-    tagColor: 'bg-sky-700',
-  },
+  { id: 1, src: '/galery/Kabah.png' },
+  { id: 2, src: '/galery/Thaif.png' },
+  { id: 3, src: '/galery/JabalRahmah.png' },
+  { id: 4, src: '/galery/AzkaAlShafa.png' },
+  { id: 5, src: '/galery/Group.png' },
+  { id: 6, src: '/galery/MasjidQuba.png' },
+  { id: 7, src: '/galery/MenaraJamMakkah.png' },
+  { id: 8, src: '/galery/MasjidNabawi.png' },
+  { id: 9, src: '/galery/Keluarga.png' },
+  { id: 10, src: '/galery/MakanBersama.png' },
 ];
 
 export default function Gallery() {
@@ -207,55 +137,53 @@ export default function Gallery() {
       {/* Lightbox Modal */}
       {lightbox !== null && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md"
           onClick={closeLightbox}
         >
           <div
-            className="relative bg-white rounded-3xl shadow-2xl max-w-4xl w-full mx-4 overflow-hidden border border-gold/20"
+            className="relative bg-black/40 rounded-3xl shadow-2xl max-w-5xl max-h-[90vh] w-full overflow-hidden border border-gold/20 flex items-center justify-center p-2 sm:p-4"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close */}
             <button
               onClick={closeLightbox}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/40 hover:bg-black/60 text-white transition-colors"
+              className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-black/60 hover:bg-maroon text-white transition-colors border border-white/20"
+              aria-label="Tutup"
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
 
-            {/* Image */}
-            <div className="relative">
+            {/* Image & Controls */}
+            <div className="relative w-full h-full flex items-center justify-center">
               <img
                 src={GALLERY_ITEMS[lightbox].src}
-                alt={GALLERY_ITEMS[lightbox].title}
-                className="w-full max-h-[65vh] object-cover"
+                alt={`Dokumentasi ${lightbox + 1}`}
+                className="max-w-full max-h-[82vh] object-contain rounded-2xl"
               />
 
               {/* Prev/Next arrows */}
               <button
                 onClick={prevPhoto}
-                className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 hover:bg-black/60 text-white transition-colors"
+                className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/60 hover:bg-maroon text-white border border-white/20 transition-all shadow-lg hover:scale-110 z-10"
+                aria-label="Sebelumnya"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={nextPhoto}
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 hover:bg-black/60 text-white transition-colors"
+                className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/60 hover:bg-maroon text-white border border-white/20 transition-all shadow-lg hover:scale-110 z-10"
+                aria-label="Selanjutnya"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
 
-              {/* Tag */}
-              <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider ${GALLERY_ITEMS[lightbox].tagColor}`}>
-                {GALLERY_ITEMS[lightbox].tag}
-              </span>
-
               {/* Counter */}
-              <span className="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-black/50 text-white text-xs font-semibold">
+              <span className="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-black/70 border border-white/10 text-white text-xs font-semibold backdrop-blur-md">
                 {lightbox + 1} / {GALLERY_ITEMS.length}
               </span>
 
               {/* Dot indicators */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 backdrop-blur-md bg-black/60 px-3 py-1.5 rounded-full border border-white/10">
                 {GALLERY_ITEMS.map((_, i) => (
                   <button
                     key={i}
@@ -264,16 +192,6 @@ export default function Gallery() {
                   />
                 ))}
               </div>
-            </div>
-
-            {/* Caption */}
-            <div className="p-6">
-              <h3 className="font-serif text-xl font-bold text-maroon mb-2">
-                {GALLERY_ITEMS[lightbox].title}
-              </h3>
-              <p className="text-charcoal/70 text-sm leading-relaxed">
-                {GALLERY_ITEMS[lightbox].caption}
-              </p>
             </div>
           </div>
         </div>

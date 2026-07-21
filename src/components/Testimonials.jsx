@@ -28,7 +28,7 @@ const REVIEWS = [
   },
   {
     id: 4,
-    name: "Sdr. Muhammad Agus Farhan & Anasya Nurlita Fahrani Dewi Rahayu",
+    name: "Sdr. Muhammad Agus Farhan & Anasya Nurlita Fahrani",
     role: "Karyawan Swasta, Jakarta",
     text: "Alhamdulillah, ibadah umrah bersama istri berjalan sangat lancar. Akomodasi hotel bintang empat di Makkah dan Madinah benar-benar premium. Yang paling berkesan adalah penyampaian sejarah islam yang sangat berkesan dari pembimbing ibadah serta muthowif, serta memberikan waktu cukup untuk berdoa disetiap tempat bersejarah dan mustajab untuk berdoa.",
     stars: 5,
