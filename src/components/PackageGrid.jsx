@@ -128,8 +128,8 @@ const PACKAGES = [
       "Hari 8: Qiyamulail dan memperbanyak ibadah di Masjid Nabawi. Sarapan pagi. Pukul 07.00 (on-time) City Tour Percetakan Al-Qur’an, Masjid Quba, Jabal Uhud, Kebun Kurma, Masjid Qiblatain, Khandaq.",
       "Hari 9: Qiyamulail dan memperbanyak ibadah di Masjid Nabawi. Sarapan pagi dan pengenalan sekitar Masjid Nabawi (Pemakaman Baqi, Saqifah Bani Saidah, Masjid Abu Bakar, Masjid Ghomamah, Masjid Ali). Persiapan Sholat Jum’at.",
       "Hari 10: Qiyamullail dan memperbanyak ibadah di Masjid Nabawi, sarapan pagi dan kegiatan pribadi Jamaah diberikan waktu bebas untuk memperbanyak Ibadah, seperti Tadarus Alquran, berdzikir, Itikaf dan Amalan Sunnah lainnya.",
-      "Hari 11: Qiyamullail dan memperbanyak ibadah di Masjid Nabawi, sarapan pagi dan persiapan Ziarah Wada (Perpisahan). Koper Bagasi diletakkan didepan kamar masing-masing pukul 09.00. Makan siang dan berkumpul di lobby untuk persiapan Check Out. Menuju Bandara Madinah menuju Jakarta dengan menggunakan pesawat SV820 take-off pukul 20.25.",
-      "Hari 12: Landing Jakarta pukul 10.25 WIB. Proses Imigrasi dan Bagasi Dan Sampai jumpa di Umroh berikutnya semoga Umroh Maqbullah. Aamiin…"
+      "Hari 11: Qiyamullail dan memperbanyak ibadah di Masjid Nabawi, sarapan pagi dan persiapan Ziarah Wada (Perpisahan). Koper Bagasi diletakkan didepan kamar masing-masing pukul 09.00. Makan siang dan berkumpul di lobby untuk persiapan Check Out. Menuju Bandara Madinah menuju Jakarta.",
+      "Hari 12: Landing Jakarta. Proses Imigrasi dan Bagasi Dan Sampai jumpa di Umroh berikutnya semoga Umroh Maqbullah. Aamiin…"
     ],
     inclusions: ["Tiket Pesawat PP Penerbangan", "Hotel Madinah Bintang 4 & Makkah Bintang 4", "Mutawwif Berpengalaman", "Bus City Tour Exclusive"],
     exclusions: ["Passport", "Suntik Meningitis", "Transport dari Daerah ke Jakarta"]
