@@ -3,16 +3,16 @@ import { X, Camera, ChevronLeft, ChevronRight } from 'lucide-react';
 import GalleryCard from './GalleryCard';
 
 const GALLERY_ITEMS = [
-  { id: 1, src: '/galery/Kabah.png' },
-  { id: 2, src: '/galery/Thaif.png' },
-  { id: 3, src: '/galery/JabalRahmah.png' },
-  { id: 4, src: '/galery/AzkaAlShafa.png' },
-  { id: 5, src: '/galery/Group.png' },
-  { id: 6, src: '/galery/MasjidQuba.png' },
-  { id: 7, src: '/galery/MenaraJamMakkah.png' },
-  { id: 8, src: '/galery/MasjidNabawi.png' },
-  { id: 9, src: '/galery/Keluarga.png' },
-  { id: 10, src: '/galery/MakanBersama.png' },
+  { id: 1, src: '/galery/1.png' },
+  { id: 2, src: '/galery/2.png' },
+  { id: 3, src: '/galery/3.png' },
+  { id: 4, src: '/galery/4.png' },
+  { id: 5, src: '/galery/5.png' },
+  { id: 6, src: '/galery/6.png' },
+  { id: 7, src: '/galery/7.png' },
+  { id: 8, src: '/galery/8.png' },
+  { id: 9, src: '/galery/9.png' },
+  { id: 10, src: '/galery/10.png' },
 ];
 
 export default function Gallery() {

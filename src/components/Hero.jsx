@@ -38,8 +38,11 @@ export default function Hero({ filters, setFilters }) {
           {/* Tagline & Copy */}
           <div className="lg:col-span-7 text-left space-y-6">
             <div className="inline-flex items-center space-x-2 bg-gold/20 backdrop-blur-md border border-gold/30 px-4 py-2 rounded-full text-gold">
-              <ShieldCheck className="w-4 h-4" />
-              <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase">Izin Resmi Kemenag RI No. 120/2024</span>
+              <ShieldCheck className="" />
+              <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase">Penyelenggara Perjalanan Ibadah Umrah (PPIU)
+                <br />
+                No : 91200160910280002
+              </span>
             </div>
 
             <h1 className="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-white leading-tight tracking-tight">
