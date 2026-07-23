@@ -12,11 +12,11 @@ const REVIEWS = [
   },
   {
     id: 2,
-    name: "Bpk. Roby Suregar & Ibu Syifa Fauziah",
-    role: "Dinas Pertamanan & Pegawai Swasta, Jakarta",
+    name: "Ibu Sarah Fauziah",
+    role: "Project Engineer, Jakarta",
     text: "Alhamdulillah, pengalaman umrah pertama bersama Ichsan Kamil sungguh luar biasa. Pelayanan Ustadz Pembimbing & mutawwif sangat membimbing dari rukun hingga ziarah. Hotel dekat dengan Plataran Masjidil Haram, memudahkan untuk beribadah langsung  di masjidil haram maupun di masjid nabawi.",
     stars: 5,
-    initials: "RS"
+    initials: "SF"
   },
   {
     id: 3,
