@@ -203,10 +203,8 @@ export default function Footer() {
         {/* Footer Bottom (Copyright & Licenses) */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light text-white/60 text-center md:text-left">
           <div>
-            <p>© {currentYear} ICHSAN KAMIL Tour & Travel. Seluruh Hak Cipta Dilindungi.</p>
-            <p className="mt-1 text-[10px]">
-              Kementerian Agama RI PPIU No. 120 Tahun 2024
-            </p>
+            <p>© {currentYear} ICHSAN KAMIL Tour & Travel.</p>
+
           </div>
 
         </div>
