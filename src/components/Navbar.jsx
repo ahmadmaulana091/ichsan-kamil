@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showWaPopup, setShowWaPopup] = useState(false);
-  const WA_MESSAGE = "Assalamualaikum, saya ingin tanya paket Umrah Ichsan Kamil";
+  const WA_MESSAGE = "Assalamualaikum, saya ingin tanya paket Umrah Ichsan Kamil Tour & Travel";
 
   useEffect(() => {
     const handleScroll = () => {

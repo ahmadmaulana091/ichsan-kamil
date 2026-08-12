@@ -58,8 +58,8 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex space-x-4 pt-2">
               <a
-                href="https://instagram.com"
-                target="https://www.instagram.com/ichsankamilofficial?igsh=MWJtdGpvbHkwcDh6bg=="
+                href="https://www.instagram.com/ichsankamilofficial?igsh=bTMycWIyYmR6bTdr"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 hover:bg-gold hover:text-maroon border border-white/10 flex items-center justify-center transition-all duration-300"
                 aria-label="Instagram"
@@ -71,8 +71,8 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.tiktok.com"
-                target="https://www.tiktok.com/@ichsankamilofficial?_r=1&_t=ZS-97v837Hkx6r"
+                href="https://www.tiktok.com/@ichsankamilofficial?_r=1&_t=ZS-98ody4qadUL"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 hover:bg-gold hover:text-maroon border border-white/10 flex items-center justify-center transition-all duration-300"
                 aria-label="TikTok"

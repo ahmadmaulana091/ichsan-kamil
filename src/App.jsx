@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import PackageGrid from './components/PackageGrid';
@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import AdminWAModal from './components/AdminWAModal';
+import PromoPopupModal, { ACTIVE_PROMO } from './components/PromoPopupModal';
 import { HelpCircle, ChevronDown, MessageSquare } from 'lucide-react';
 
 export default function App() {
@@ -18,6 +19,19 @@ export default function App() {
 
   const [activeFaq, setActiveFaq] = useState(null);
   const [showWaPopup, setShowWaPopup] = useState(false);
+
+  // Promo Popup: tampilkan otomatis setelah 800ms saat website dibuka
+  const [showPromoPopup, setShowPromoPopup] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setShowPromoPopup(true), 800);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Handler: langsung buka detail paket dari popup promo
+  const [promoPackageId, setPromoPackageId] = useState(null);
+  const handleOpenDetail = (packageId) => {
+    setPromoPackageId(packageId);
+  };
   const WA_MESSAGE_CS = "Assalamualaikum, saya ingin tanya mengenai syarat pendaftaran Umrah";
 
   const faqs = [
@@ -55,7 +69,11 @@ export default function App() {
       <Features />
 
       {/* Package Grid Section */}
-      <PackageGrid filters={filters} />
+      <PackageGrid
+        filters={filters}
+        openPackageId={promoPackageId}
+        onPackageDetailClosed={() => setPromoPackageId(null)}
+      />
 
       {/* Testimonials */}
       <Testimonials />
@@ -134,6 +152,15 @@ export default function App() {
         <AdminWAModal
           message={WA_MESSAGE_CS}
           onClose={() => setShowWaPopup(false)}
+        />
+      )}
+
+      {/* Promo Popup — muncul otomatis saat website dibuka */}
+      {showPromoPopup && (
+        <PromoPopupModal
+          promo={ACTIVE_PROMO}
+          onClose={() => setShowPromoPopup(false)}
+          onOpenDetail={handleOpenDetail}
         />
       )}
     </div>

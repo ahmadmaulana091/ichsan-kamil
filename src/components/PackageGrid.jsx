@@ -137,7 +137,7 @@ const PACKAGES = [
 ];
 
 
-export default function PackageGrid({ filters, onResetFilters }) {
+export default function PackageGrid({ filters, onResetFilters, openPackageId, onPackageDetailClosed }) {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [brosurPackage, setBrosurPackage] = useState(null);
   const [waMessage, setWaMessage] = useState(null);
@@ -189,6 +189,13 @@ export default function PackageGrid({ filters, onResetFilters }) {
       window.removeEventListener('resize', checkScroll);
     };
   }, [filters, filteredPackages.length]);
+
+  // Buka detail paket secara otomatis ketika openPackageId berubah
+  useEffect(() => {
+    if (!openPackageId) return;
+    const pkg = PACKAGES.find((p) => p.id === openPackageId);
+    if (pkg) setSelectedPackage(pkg);
+  }, [openPackageId]);
 
   const handleScroll = (direction) => {
     if (scrollContainerRef.current) {
