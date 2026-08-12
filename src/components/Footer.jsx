@@ -58,8 +58,8 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex space-x-4 pt-2">
               <a
-                href="https://instagram.com"
-                target="https://www.instagram.com/ichsankamilofficial?igsh=MWJtdGpvbHkwcDh6bg=="
+                href="https://www.instagram.com/ichsankamilofficial?igsh=bTMycWIyYmR6bTdr"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 hover:bg-gold hover:text-maroon border border-white/10 flex items-center justify-center transition-all duration-300"
                 aria-label="Instagram"
@@ -71,8 +71,8 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.tiktok.com"
-                target="https://www.tiktok.com/@ichsankamilofficial?_r=1&_t=ZS-97v837Hkx6r"
+                href="https://www.tiktok.com/@ichsankamilofficial?_r=1&_t=ZS-98ody4qadUL"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 hover:bg-gold hover:text-maroon border border-white/10 flex items-center justify-center transition-all duration-300"
                 aria-label="TikTok"
@@ -184,7 +184,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 text-gold mr-3 flex-shrink-0" />
-                <a href="mailto:info@alharamain.com" className="hover:text-gold transition-colors">
+                <a href="mailto:info@ichsankamil.com" className="hover:text-gold transition-colors">
                   info@ichsankamil.com
                 </a>
               </li>
@@ -203,10 +203,8 @@ export default function Footer() {
         {/* Footer Bottom (Copyright & Licenses) */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light text-white/60 text-center md:text-left">
           <div>
-            <p>© {currentYear} ICHSAN KAMIL Tour & Travel. Seluruh Hak Cipta Dilindungi.</p>
-            <p className="mt-1 text-[10px]">
-              Kementerian Agama RI PPIU No. 120 Tahun 2024
-            </p>
+            <p>© {currentYear} ICHSAN KAMIL Tour & Travel.</p>
+
           </div>
 
         </div>
