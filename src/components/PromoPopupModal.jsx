@@ -17,7 +17,7 @@ import { X, ArrowRight } from 'lucide-react';
 // ─── Konfigurasi Promo Aktif ──────────────────────────────────────
 export const ACTIVE_PROMO = {
   packageId: 2,           // id paket di PACKAGES (PackageGrid)
-  brosurImg: '/promosi/promosi-oct26_2.png',
+  brosurImg: '/promosi/promosi_oct26_3.png',
   ctaLabel: 'Lihat Detail Paket',
 };
 // ─────────────────────────────────────────────────────────────────
