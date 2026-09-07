@@ -1,6 +1,6 @@
 import React from 'react';
 import { Calendar, Compass, ShieldCheck, Search, DollarSign } from 'lucide-react';
-import heroBg from '../assets/mecca_hero.png';
+import heroBg from '../assets/mecca_hero.webp';
 
 export default function Hero({ filters, setFilters }) {
   const handleFilterChange = (key, value) => {
@@ -25,6 +25,8 @@ export default function Hero({ filters, setFilters }) {
         <img
           src={heroBg}
           alt="Masjid al-Haram Mecca"
+          fetchPriority="high"
+          decoding="async"
           className="w-full h-full object-cover object-center filter brightness-[0.4] scale-105"
         />
         {/* Soft Maroon & Gold gradient overlays */}

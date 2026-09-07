@@ -23,6 +23,7 @@ export default function GalleryCard({ item, onClick, className = '' }) {
           alt={`Galeri ${item.id}`}
           className="w-full h-full object-cover transition-transform duration-700 scale-100 group-hover:scale-105"
           loading="lazy"
+          decoding="async"
         />
       </div>
 

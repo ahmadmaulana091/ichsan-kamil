@@ -33,7 +33,7 @@ export default function Footer() {
             <div className="flex flex-col space-y-0">
               {/* Brand Logo + Name */}
               <div className="flex items-center space-x-3">
-                <img src="/logo/logo.png" alt="Logo Ichsan Kamil" className="w-14 h-14 object-contain" />
+                <img src="/logo/logo.webp" alt="Logo Ichsan Kamil" loading="lazy" decoding="async" className="w-14 h-14 object-contain" />
                 <div>
                   <span className="font-serif font-bold text-xl text-white tracking-wide block leading-none">
                     ICHSAN KAMIL
@@ -46,8 +46,10 @@ export default function Footer() {
 
               {/* Kemenag Badge */}
               <img
-                src="/logo/LogoKemenagRemoveBg.png"
+                src="/logo/LogoKemenagRemoveBg.webp"
                 alt="Logo Kementerian Agama RI"
+                loading="lazy"
+                decoding="async"
                 className="w-70 h-70 object-contain opacity-90 -mt-25"
               />
             </div>

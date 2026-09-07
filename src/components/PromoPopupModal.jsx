@@ -17,7 +17,7 @@ import { X, ArrowRight } from 'lucide-react';
 // ─── Konfigurasi Promo Aktif ──────────────────────────────────────
 export const ACTIVE_PROMO = {
   packageId: 2,           // id paket di PACKAGES (PackageGrid)
-  brosurImg: '/promosi/promosi_oct26_3.png',
+  brosurImg: '/promosi/promosi_oct26_4.webp',
   ctaLabel: 'Lihat Detail Paket',
 };
 // ─────────────────────────────────────────────────────────────────
@@ -104,6 +104,8 @@ export default function PromoPopupModal({ promo = ACTIVE_PROMO, onClose, onOpenD
           <img
             src={promo.brosurImg}
             alt="Brosur Promo Ichsan Kamil"
+            loading="lazy"
+            decoding="async"
             style={{
               display: 'block',
               width: '100%',

@@ -583,14 +583,14 @@ export default function PackageGrid({ filters, onResetFilters, openPackageId, on
 
 // Mapping bulan ke file brosur yang tersedia di /public
 const BROSUR_MAP = {
-  'Agustus': '/brosur/BrosurAgu26.png',
-  'Oktober': '/brosur/BrosurOct26.png',
-  'November': '/brosur/BrosurNov26.png',
-  'Januari': '/brosur/BrosurJan27.png',
+  'Agustus': '/brosur/BrosurAgu26.webp',
+  'Oktober': '/brosur/BrosurOct26.webp',
+  'November': '/brosur/BrosurNov26.webp',
+  'Januari': '/brosur/BrosurJan27.webp',
 };
 
 function BrosurModal({ pkg, onClose, onOrderClick }) {
-  const brosurSrc = BROSUR_MAP[pkg.month] ?? '/BrosurOct26.png';
+  const brosurSrc = BROSUR_MAP[pkg.month] ?? '/brosur/BrosurOct26.webp';
 
   return (
     <div
@@ -615,6 +615,8 @@ function BrosurModal({ pkg, onClose, onOrderClick }) {
           <img
             src={brosurSrc}
             alt={`Brosur Digital Ichsan Kamil - ${pkg.title}`}
+            loading="lazy"
+            decoding="async"
             className="w-full max-h-[75vh] object-contain mx-auto"
           />
         </div>

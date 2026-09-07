@@ -51,8 +51,9 @@ export default function Navbar() {
             <a href="#home" className="flex items-center space-x-2 group">
               {/* nav-logo class handles the white→original filter transition via CSS */}
               <img
-                src={isScrolled ? '/logo/LogoRemoveBg.png' : '/logo/LogoPutihRemoveBg.png'}
+                src={isScrolled ? '/logo/LogoRemoveBg.webp' : '/logo/LogoPutihRemoveBg.webp'}
                 alt="Logo Ichsan Kamil"
+                decoding="async"
                 className={`w-14 h-14 object-contain transition-all duration-400${!isScrolled ? ' scale-[1.35]' : ''}`}
               />
               <div>

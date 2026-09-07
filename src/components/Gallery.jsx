@@ -3,16 +3,16 @@ import { X, Camera, ChevronLeft, ChevronRight } from 'lucide-react';
 import GalleryCard from './GalleryCard';
 
 const GALLERY_ITEMS = [
-  { id: 1, src: '/galery/agu_26_3.png' },
-  { id: 2, src: '/galery/agu_26_2.png' },
-  { id: 3, src: '/galery/3.png' },
-  { id: 4, src: '/galery/agu_26_4.png' },
-  { id: 5, src: '/galery/5.png' },
-  { id: 6, src: '/galery/6.png' },
-  { id: 7, src: '/galery/agu_26_1.png' },
-  { id: 8, src: '/galery/4.png' },
-  { id: 9, src: '/galery/9.png' },
-  { id: 10, src: '/galery/10.png' },
+  { id: 1, src: '/galery/agu_26_3.webp' },
+  { id: 2, src: '/galery/agu_26_2.webp' },
+  { id: 3, src: '/galery/3.webp' },
+  { id: 4, src: '/galery/agu_26_4.webp' },
+  { id: 5, src: '/galery/5.webp' },
+  { id: 6, src: '/galery/6.webp' },
+  { id: 7, src: '/galery/agu_26_1.webp' },
+  { id: 8, src: '/galery/4.webp' },
+  { id: 9, src: '/galery/9.webp' },
+  { id: 10, src: '/galery/10.webp' },
 ];
 
 export default function Gallery() {
