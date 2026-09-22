@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import AdminWAModal from './components/AdminWAModal';
 import PromoPopupModal, { ACTIVE_PROMO } from './components/PromoPopupModal';
+import InfoPopupModal from './components/InfoPopupModal';
 import { HelpCircle, ChevronDown, MessageSquare } from 'lucide-react';
 
 export default function App() {
@@ -19,6 +20,8 @@ export default function App() {
 
   const [activeFaq, setActiveFaq] = useState(null);
   const [showWaPopup, setShowWaPopup] = useState(false);
+  const WA_MESSAGE_CS = "Assalamualaikum, saya ingin tanya mengenai syarat pendaftaran Umrah";
+  const [waMessage, setWaMessage] = useState(WA_MESSAGE_CS);
 
   // Promo Popup: tampilkan otomatis setelah 800ms saat website dibuka
   const [showPromoPopup, setShowPromoPopup] = useState(false);
@@ -32,7 +35,7 @@ export default function App() {
   const handleOpenDetail = (packageId) => {
     setPromoPackageId(packageId);
   };
-  const WA_MESSAGE_CS = "Assalamualaikum, saya ingin tanya mengenai syarat pendaftaran Umrah";
+
 
   const faqs = [
     {
@@ -150,17 +153,28 @@ export default function App() {
       {/* Admin WA Popup */}
       {showWaPopup && (
         <AdminWAModal
-          message={WA_MESSAGE_CS}
-          onClose={() => setShowWaPopup(false)}
+          message={waMessage}
+          onClose={() => { setShowWaPopup(false); setWaMessage(WA_MESSAGE_CS); }}
         />
       )}
 
-      {/* Promo Popup — muncul otomatis saat website dibuka */}
-      {showPromoPopup && (
+      {/* Popup Otomatis — muncul saat website dibuka */}
+      {/* mode='promo' → direct ke detail paket | mode='wa' → direct ke WhatsApp */}
+      {showPromoPopup && ACTIVE_PROMO.mode === 'promo' && (
         <PromoPopupModal
           promo={ACTIVE_PROMO}
           onClose={() => setShowPromoPopup(false)}
           onOpenDetail={handleOpenDetail}
+        />
+      )}
+      {showPromoPopup && ACTIVE_PROMO.mode === 'wa' && (
+        <InfoPopupModal
+          popup={ACTIVE_PROMO}
+          onClose={() => setShowPromoPopup(false)}
+          onOpenWA={() => {
+            setWaMessage(ACTIVE_PROMO.waMessage || WA_MESSAGE_CS);
+            setShowWaPopup(true);
+          }}
         />
       )}
     </div>
