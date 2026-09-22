@@ -3,16 +3,16 @@ import { X, Camera, ChevronLeft, ChevronRight } from 'lucide-react';
 import GalleryCard from './GalleryCard';
 
 const GALLERY_ITEMS = [
-  { id: 1, src: '/galery/agu_26_3.webp' },
-  { id: 2, src: '/galery/agu_26_2.webp' },
-  { id: 3, src: '/galery/3.webp' },
-  { id: 4, src: '/galery/agu_26_4.webp' },
-  { id: 5, src: '/galery/5.webp' },
-  { id: 6, src: '/galery/6.webp' },
-  { id: 7, src: '/galery/agu_26_1.webp' },
-  { id: 8, src: '/galery/4.webp' },
-  { id: 9, src: '/galery/9.webp' },
-  { id: 10, src: '/galery/10.webp' },
+  { id: 1, src: '/galery/agu_26_3.webp', alt: 'Jamaah umrah Ichsan Kamil berfoto di depan Masjidil Haram, Makkah - Agustus 2026' },
+  { id: 2, src: '/galery/agu_26_2.webp', alt: 'Rombongan jamaah umrah Ichsan Kamil saat city tour Madinah - Agustus 2026' },
+  { id: 3, src: '/galery/3.webp', alt: 'Suasana ibadah jamaah umrah Ichsan Kamil di pelataran Masjid Nabawi, Madinah' },
+  { id: 4, src: '/galery/agu_26_4.webp', alt: 'Jamaah umrah Ichsan Kamil ziarah ke Jabal Uhud, Madinah - Agustus 2026' },
+  { id: 5, src: '/galery/5.webp', alt: 'Kebersamaan jamaah umrah Ichsan Kamil saat perjalanan ibadah di Tanah Suci' },
+  { id: 6, src: '/galery/6.webp', alt: 'Dokumentasi perjalanan umrah bersama Ichsan Kamil Tour and Travel' },
+  { id: 7, src: '/galery/agu_26_1.webp', alt: 'Jamaah umrah Ichsan Kamil di hotel bintang 4 dekat Masjidil Haram - Agustus 2026' },
+  { id: 8, src: '/galery/4.webp', alt: 'Momen spiritual jamaah Ichsan Kamil saat thawaf di Masjidil Haram, Makkah' },
+  { id: 9, src: '/galery/9.webp', alt: 'Pemandangan Masjid Nabawi dari hotel jamaah umrah Ichsan Kamil' },
+  { id: 10, src: '/galery/10.webp', alt: 'Foto bersama jamaah dan pembimbing ibadah Ichsan Kamil Tour and Travel' },
 ];
 
 export default function Gallery() {
@@ -157,7 +157,7 @@ export default function Gallery() {
             <div className="relative w-full h-full flex items-center justify-center">
               <img
                 src={GALLERY_ITEMS[lightbox].src}
-                alt={`Dokumentasi ${lightbox + 1}`}
+                alt={GALLERY_ITEMS[lightbox].alt || `Dokumentasi umrah Ichsan Kamil ${lightbox + 1}`}
                 className="max-w-full max-h-[82vh] object-contain rounded-2xl"
               />
 
